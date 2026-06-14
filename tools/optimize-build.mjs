@@ -25,7 +25,7 @@ if (fs.existsSync(jsPath)) {
     .replace(/\/\*[\s\S]*?\*\//g, "")
     .replace(/(^|\n)\s*\/\/[^\n]*/g, "$1")
     .replace(/\s+/g, " ")
-    .replace(/\s*([{}();,:=<>+\-])\s*/g, "$1")
+    .replace(/\s*([{}();,:=<>+])\s*/g, "$1")
     .trim();
   fs.writeFileSync(jsPath, output);
   console.log(`optimized ${path.relative(ROOT, jsPath)} ${source.length} -> ${output.length} bytes`);
