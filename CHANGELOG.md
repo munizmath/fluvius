@@ -16,3 +16,4 @@
 - Atualizadas as bios de Gláucia Maria Muniz de Oliveira e João Augusto de Souza Pinto na seção de equipe, com cargo, CREA e resumo técnico validado; fotos oficiais seguem pendentes.
 - Incorporado conteúdo factual do folder/site público em posicionamento, áreas de serviço, softwares, competência técnica e chamada de contato; fotos, logos, cases, métricas e depoimentos permanecem bloqueados até envio dos donos.
 - Adicionados retratos dos sócios na seção de equipe, substituindo os placeholders pendentes.
+- Atualizado uso da marca com logo horizontal em alta resolução para header/footer/schema e logo quadrado para ícones do site.

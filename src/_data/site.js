@@ -14,7 +14,7 @@ module.exports = {
   language: "pt-BR",
   themeColor: "#1c2a6e",
   socialImage: "/assets/hero-dam.webp",
-  logo: "/assets/logo-lockup.jpg",
+  logo: "/assets/logo-brand.webp",
   manifest: "/site.webmanifest",
   favicon: "/assets/favicon.svg",
   analytics: {
