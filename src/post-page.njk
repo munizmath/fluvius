@@ -5,13 +5,14 @@ pagination:
   size: 1
   alias: post
 permalink: "/insights/{{ post.slug }}/index.html"
-title: "{{ post.title }} — Fluvius Engenharia"
-description: "{{ post.description }}"
 navKey: insights
-breadcrumbs:
-  - label: "Insights"
-    url: "/insights/"
-  - label: "{{ post.title }}"
+eleventyComputed:
+  title: "{{ post.title }} — Fluvius Engenharia"
+  description: "{{ post.description }}"
+  breadcrumbs:
+    - label: "Insights"
+      url: "/insights/"
+    - label: "{{ post.title }}"
 ---
 <article class="section bg-paper">
   <div class="wrap prose">

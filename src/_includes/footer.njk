@@ -1,23 +1,23 @@
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <div class="chip"><img src="{{ site.logo }}" alt="{{ site.name }}" width="160" height="40"></div>
+      <div class="chip"><img src="{{ site.logo | pathUrl(site) }}" alt="{{ site.name }}" width="160" height="40"></div>
       <p>Soluções de engenharia em Recursos Hídricos e Geotecnia, com base técnica, conformidade regulatória e foco em sustentabilidade.</p>
     </div>
     <div class="footer-col">
       <h4>Empresa</h4>
       <ul>
-        <li><a href="/sobre/">Quem Somos</a></li>
-        <li><a href="/metodologia/">Metodologia</a></li>
-        <li><a href="/portfolio/">Projetos</a></li>
+        <li><a href="{{ '/sobre/' | pathUrl(site) }}">Quem Somos</a></li>
+        <li><a href="{{ '/metodologia/' | pathUrl(site) }}">Metodologia</a></li>
+        <li><a href="{{ '/portfolio/' | pathUrl(site) }}">Projetos</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Serviços</h4>
       <ul>
-        <li><a href="/servicos/">Hidrologia &amp; Hidráulica</a></li>
-        <li><a href="/servicos/">Geotecnia</a></li>
-        <li><a href="/servicos/">Ensaios Laboratoriais</a></li>
+        <li><a href="{{ '/servicos/' | pathUrl(site) }}">Hidrologia &amp; Hidráulica</a></li>
+        <li><a href="{{ '/servicos/' | pathUrl(site) }}">Geotecnia</a></li>
+        <li><a href="{{ '/servicos/' | pathUrl(site) }}">Ensaios Laboratoriais</a></li>
       </ul>
     </div>
     <div class="footer-col">

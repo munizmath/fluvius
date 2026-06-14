@@ -3,9 +3,9 @@
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
 <link rel="canonical" href="{{ canonical or (page.url | absoluteUrl(site)) }}">
-<link rel="icon" href="{{ site.favicon }}" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/assets/logo-lockup.png">
-<link rel="manifest" href="{{ site.manifest }}">
+<link rel="icon" href="{{ site.favicon | pathUrl(site) }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ '/assets/logo-lockup.png' | pathUrl(site) }}">
+<link rel="manifest" href="{{ site.manifest | pathUrl(site) }}">
 <meta name="theme-color" content="{{ site.themeColor }}">
 <meta property="og:type" content="{{ ogType or 'website' }}">
 <meta property="og:locale" content="{{ site.locale }}">
@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="{{ (ogImage or site.socialImage) | absoluteUrl(site) }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="/assets/fluvius.css">
+<link rel="stylesheet" href="{{ '/assets/fluvius.css' | pathUrl(site) }}">
 {% if site.analytics.searchConsoleVerification %}
 <meta name="google-site-verification" content="{{ site.analytics.searchConsoleVerification }}">
 {% endif %}

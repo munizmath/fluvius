@@ -9,7 +9,7 @@ breadcrumbs: [ { "label": "Quem Somos" } ]
 ---<section id="conteudo" class="page-hero">
   <div class="motif-layer" aria-hidden="true"><div class="ring ring--gw ring-page-a"></div></div>
   <div class="wrap page-hero__inner">
-    <div class="crumbs"><a href="/">Início</a> / Quem Somos</div>
+    <div class="crumbs"><a href="{{ '/' | pathUrl(site) }}">Início</a> / Quem Somos</div>
     <span class="eyebrow">Fluvius Engenharia</span>
     <h1>Engenharia aplicada a água, solo, risco e conformidade.</h1>
     <p class="lead">Atuamos em Recursos Hídricos e Geotecnia com linguagem técnica, documentação rastreável e foco em projetos que precisam resistir a auditoria, licenciamento e operação.</p>
@@ -25,7 +25,7 @@ breadcrumbs: [ { "label": "Quem Somos" } ]
         <p class="lead">A Fluvius combina estudos, projetos, ensaios e suporte regulatório para clientes em mineração, energia, saneamento, infraestrutura, agronegócio e indústria.</p>
         <p class="muted">O posicionamento é técnico e direto: reduzir incertezas, organizar evidências e apoiar decisões ambientalmente responsáveis sem greenwashing ou promessa vaga.</p>
       </div>
-      <div class="split__media reveal"><img loading="lazy" decoding="async" src="/assets/hero-dam.webp" alt="Engenheiro em vistoria de estrutura hidráulica"></div>
+      <div class="split__media reveal"><img loading="lazy" decoding="async" src="{{ '/assets/hero-dam.webp' | pathUrl(site) }}" alt="Engenheiro em vistoria de estrutura hidráulica"></div>
     </div>
   </div>
 </section>
@@ -55,7 +55,7 @@ breadcrumbs: [ { "label": "Quem Somos" } ]
     <div class="grid grid-2 mt-40">
       {% for person in team %}
       <article class="card team-card reveal">
-        <img src="{{ person.image }}" alt="Retrato pendente de {{ person.role }}" width="160" height="160" loading="lazy" decoding="async">
+        <img src="{{ person.image | pathUrl(site) }}" alt="Retrato pendente de {{ person.role }}" width="160" height="160" loading="lazy" decoding="async">
         <div>
           <h3>{{ person.name }}</h3>
           <p class="muted">{{ person.role }}</p>
@@ -79,6 +79,6 @@ breadcrumbs: [ { "label": "Quem Somos" } ]
     <span class="eyebrow eyebrow--center center-justify">Contato técnico</span>
     <h2>Converse com a Fluvius sobre seu escopo.</h2>
     <p>Envie informações do empreendimento, localização, prazos e documentos existentes.</p>
-    <div class="cta-band__btns"><a href="/contato/" class="btn btn--green btn--lg">Solicitar proposta</a></div>
+    <div class="cta-band__btns"><a href="{{ '/contato/' | pathUrl(site) }}" class="btn btn--green btn--lg">Solicitar proposta</a></div>
   </div>
 </section>

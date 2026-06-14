@@ -1,9 +1,9 @@
 {% if breadcrumbs and breadcrumbs.length %}
 <nav class="breadcrumbs wrap" aria-label="Breadcrumb">
   <ol>
-    <li><a href="/">Início</a></li>
+    <li><a href="{{ '/' | pathUrl(site) }}">Início</a></li>
     {% for crumb in breadcrumbs %}
-    <li>{% if crumb.url and not loop.last %}<a href="{{ crumb.url }}">{{ crumb.label }}</a>{% else %}<span aria-current="page">{{ crumb.label }}</span>{% endif %}</li>
+    <li>{% if crumb.url and not loop.last %}<a href="{{ crumb.url | pathUrl(site) }}">{{ crumb.label }}</a>{% else %}<span aria-current="page">{{ crumb.label }}</span>{% endif %}</li>
     {% endfor %}
   </ol>
 </nav>

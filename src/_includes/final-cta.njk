@@ -4,7 +4,7 @@
     <h2>{{ ctaTitle or "Converse com a Fluvius sobre seu escopo." }}</h2>
     <p>{{ ctaText or "Envie setor, localização, prazo desejado e documentos existentes. A resposta técnica fica mais objetiva com esse contexto." }}</p>
     <div class="cta-band__btns">
-      <a href="/contato/" class="btn btn--green btn--lg">Solicitar proposta</a>
+      <a href="{{ '/contato/' | pathUrl(site) }}" class="btn btn--green btn--lg">Solicitar proposta</a>
       <a href="{{ site.contact.whatsappUrl }}" class="btn btn--light btn--lg" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>

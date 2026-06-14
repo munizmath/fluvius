@@ -5,13 +5,14 @@ pagination:
   size: 1
   alias: service
 permalink: "/servicos/{{ service.id }}/index.html"
-title: "{{ service.title }} — Fluvius Engenharia"
-description: "{{ service.summary }}"
 navKey: servicos
-breadcrumbs:
-  - label: "Serviços"
-    url: "/servicos/"
-  - label: "{{ service.title }}"
+eleventyComputed:
+  title: "{{ service.title }} — Fluvius Engenharia"
+  description: "{{ service.summary }}"
+  breadcrumbs:
+    - label: "Serviços"
+      url: "/servicos/"
+    - label: "{{ service.title }}"
 ---
 <section class="page-hero">
   <div class="wrap page-hero__inner">
@@ -19,8 +20,8 @@ breadcrumbs:
     <h1>{{ service.title }}</h1>
     <p class="lead">{{ service.summary }}</p>
     <div class="hero__cta">
-      <a href="/contato/" class="btn btn--green btn--lg">Solicitar proposta</a>
-      <a href="/servicos/" class="btn btn--light btn--lg">Ver todos os serviços</a>
+      <a href="{{ '/contato/' | pathUrl(site) }}" class="btn btn--green btn--lg">Solicitar proposta</a>
+      <a href="{{ '/servicos/' | pathUrl(site) }}" class="btn btn--light btn--lg">Ver todos os serviços</a>
     </div>
   </div>
 </section>
@@ -58,7 +59,7 @@ breadcrumbs:
           {% for sectorId in service.sectorTags %}
           {% set sector = sectors | findSector(sectorId) %}
           {% if sector %}
-          <li><a class="textlink" href="/setores/{{ sector.id }}/">{{ sector.title }}</a></li>
+          <li><a class="textlink" href="{{ ('/setores/' + sector.id + '/') | pathUrl(site) }}">{{ sector.title }}</a></li>
           {% endif %}
           {% endfor %}
         </ul>

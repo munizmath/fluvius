@@ -8,17 +8,17 @@ navKey: index
 breadcrumbs: []
 ---<!-- ============ HERO ============ -->
 <section id="conteudo" class="hero">
-  <div class="hero__media"><img src="/assets/hero-dam.webp" alt="Engenheiro em vistoria de barragem em vale montanhoso" width="1200" height="750" fetchpriority="high"></div>
+  <div class="hero__media"><img src="{{ '/assets/hero-dam.webp' | pathUrl(site) }}" alt="Engenheiro em vistoria de barragem em vale montanhoso" width="1200" height="750" fetchpriority="high"></div>
   <div class="wrap hero__inner">
     <div class="hero__content">
       <span class="eyebrow">Recursos Hídricos · Geotecnia · Meio Ambiente</span>
       <h1 class="display">Engenharia para decisões<br>de alto risco hídrico e geotécnico.</h1>
       <p class="lead">Equipe de engenheiros especialistas em soluções de Recursos Hídricos e Geotecnia. Conduzimos estudos, projetos e ensaios que reduzem incertezas, sustentam o licenciamento e dão previsibilidade a empreendimentos complexos.</p>
       <div class="hero__cta">
-        <a href="/contato/" class="btn btn--green btn--lg">Solicitar proposta
+        <a href="{{ '/contato/' | pathUrl(site) }}" class="btn btn--green btn--lg">Solicitar proposta
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="/servicos/" class="btn btn--ondark btn--lg">Ver serviços</a>
+        <a href="{{ '/servicos/' | pathUrl(site) }}" class="btn btn--ondark btn--lg">Ver serviços</a>
       </div>
     </div>
   </div>
@@ -128,7 +128,7 @@ breadcrumbs: []
     </div>
 
     <div class="flex items-center wrap-gap mt-32 reveal">
-      <a href="/servicos/" class="btn btn--primary">Ver todos os serviços
+      <a href="{{ '/servicos/' | pathUrl(site) }}" class="btn btn--primary">Ver todos os serviços
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <span class="muted softwares-note">Softwares: HEC-RAS · MODFLOW · GeoStudio · AutoCAD Civil 3D</span>
@@ -173,7 +173,7 @@ breadcrumbs: []
       <div class="bg-navy method-preview-card"><div class="mono mini-label--light">03</div><h3>Projeto</h3><p>Detalhamento executivo conforme normas e exigências de licenciamento.</p></div>
       <div class="bg-navy method-preview-card"><div class="mono mini-label--light">04</div><h3>Monitoramento</h3><p>Acompanhamento, condicionantes e suporte técnico na operação.</p></div>
     </div>
-    <div class="mt-32 reveal"><a href="/metodologia/" class="btn btn--light">Conhecer a metodologia
+    <div class="mt-32 reveal"><a href="{{ '/metodologia/' | pathUrl(site) }}" class="btn btn--light">Conhecer a metodologia
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   </div>
 </section>
@@ -194,7 +194,7 @@ breadcrumbs: []
       <div class="feat reveal"><h3>Compliance</h3><p>Matriz legal, condicionantes, prazos, evidências e histórico de auditoria.</p></div>
       <div class="feat reveal"><h3>Estudos</h3><p>Relatórios, laudos, modelos, mapas e memoriais com rastreabilidade documental.</p></div>
     </div>
-    <div class="mt-32 reveal"><a href="/plataforma/" class="btn btn--primary">Ver módulos digitais</a></div>
+    <div class="mt-32 reveal"><a href="{{ '/plataforma/' | pathUrl(site) }}" class="btn btn--primary">Ver módulos digitais</a></div>
   </div>
 </section>
 
@@ -240,35 +240,35 @@ breadcrumbs: []
         <span class="eyebrow">Projetos</span>
         <h2>Prova de execução.</h2>
       </div>
-      <a href="/portfolio/" class="textlink mb-0">Ver portfólio completo
+      <a href="{{ '/portfolio/' | pathUrl(site) }}" class="textlink mb-0">Ver portfólio completo
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
     <div class="grid grid-3 mt-40">
       <article class="case reveal">
-        <div class="case__img"><img loading="lazy" decoding="async" src="/assets/hero-dam.webp" alt="Barragem em área de mineração"><span class="case__tag">Mineração</span></div>
+        <div class="case__img"><img loading="lazy" decoding="async" src="{{ '/assets/hero-dam.webp' | pathUrl(site) }}" alt="Barragem em área de mineração"><span class="case__tag">Mineração</span></div>
         <div class="case__body">
           <h3>Estudo de ruptura de barragem de rejeito</h3>
           <div class="case__row"><span class="k">Escopo</span><span class="v">Modelagem hidrodinâmica e mapeamento de manchas de inundação</span></div>
           <div class="case__row"><span class="k">Resultado</span><span class="v">Plano de ação emergencial subsidiado e condicionantes atendidas</span></div>
-          <a href="/portfolio/" class="textlink push-auto">Ver projeto</a>
+          <a href="{{ '/portfolio/' | pathUrl(site) }}" class="textlink push-auto">Ver projeto</a>
         </div>
       </article>
       <article class="case reveal">
-        <div class="case__img"><img loading="lazy" decoding="async" src="/assets/river-accent.webp" alt="Curso d'água e infraestrutura de drenagem"><span class="case__tag">Saneamento</span></div>
+        <div class="case__img"><img loading="lazy" decoding="async" src="{{ '/assets/river-accent.webp' | pathUrl(site) }}" alt="Curso d'água e infraestrutura de drenagem"><span class="case__tag">Saneamento</span></div>
         <div class="case__body">
           <h3>Projeto de drenagem urbana sustentável</h3>
           <div class="case__row"><span class="k">Escopo</span><span class="v">Dimensionamento de microdrenagem e dispositivos de detenção</span></div>
           <div class="case__row"><span class="k">Resultado</span><span class="v">Redução de risco de alagamento e aprovação no licenciamento</span></div>
-          <a href="/portfolio/" class="textlink push-auto">Ver projeto</a>
+          <a href="{{ '/portfolio/' | pathUrl(site) }}" class="textlink push-auto">Ver projeto</a>
         </div>
       </article>
       <article class="case reveal">
-        <div class="case__img"><img loading="lazy" decoding="async" src="/assets/hero-dam.webp" alt="Estrutura hidráulica em vale"><span class="case__tag">Energia</span></div>
+        <div class="case__img"><img loading="lazy" decoding="async" src="{{ '/assets/hero-dam.webp' | pathUrl(site) }}" alt="Estrutura hidráulica em vale"><span class="case__tag">Energia</span></div>
         <div class="case__body">
           <h3>Estabilidade de taludes em vale de hidrelétrica</h3>
           <div class="case__row"><span class="k">Escopo</span><span class="v">Investigação geotécnica, análise de estabilidade e contenção</span></div>
           <div class="case__row"><span class="k">Resultado</span><span class="v">Solução de contenção viável técnica e economicamente</span></div>
-          <a href="/portfolio/" class="textlink push-auto">Ver projeto</a>
+          <a href="{{ '/portfolio/' | pathUrl(site) }}" class="textlink push-auto">Ver projeto</a>
         </div>
       </article>
     </div>
@@ -283,7 +283,7 @@ breadcrumbs: []
         <span class="eyebrow">Insights</span>
         <h2>Conteúdo técnico para decisões regulatórias.</h2>
       </div>
-      <a href="/insights/" class="textlink mb-0">Ver biblioteca técnica</a>
+      <a href="{{ '/insights/' | pathUrl(site) }}" class="textlink mb-0">Ver biblioteca técnica</a>
     </div>
     <div class="grid grid-3 mt-40">
       <article class="card reveal"><span class="count">Alerta regulatório</span><h3>Condicionantes ambientais em obras hidráulicas</h3><p>Como organizar prazos, evidências e responsáveis para reduzir risco de não conformidade.</p></article>
@@ -319,7 +319,7 @@ breadcrumbs: []
     <h2>Tem um projeto com risco hídrico ou geotécnico?</h2>
     <p>Conte o desafio e o setor. Retornamos com uma proposta técnica e o caminho regulatório recomendado.</p>
     <div class="cta-band__btns">
-      <a href="/contato/" class="btn btn--green btn--lg">Solicitar proposta</a>
+      <a href="{{ '/contato/' | pathUrl(site) }}" class="btn btn--green btn--lg">Solicitar proposta</a>
       <a href="https://wa.me/5531993501315" class="btn btn--light btn--lg" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.5-5.7c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-1 2.2 5.3 5.3 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c2.3.9 2.3.6 2.7.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>
         WhatsApp</a>

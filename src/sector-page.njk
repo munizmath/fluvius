@@ -5,13 +5,14 @@ pagination:
   size: 1
   alias: sector
 permalink: "/setores/{{ sector.id }}/index.html"
-title: "{{ sector.title }} — Fluvius Engenharia"
-description: "{{ sector.summary }}"
 navKey: portfolio
-breadcrumbs:
-  - label: "Setores"
-    url: "/portfolio/"
-  - label: "{{ sector.title }}"
+eleventyComputed:
+  title: "{{ sector.title }} — Fluvius Engenharia"
+  description: "{{ sector.summary }}"
+  breadcrumbs:
+    - label: "Setores"
+      url: "/portfolio/"
+    - label: "{{ sector.title }}"
 ---
 <section class="page-hero">
   <div class="wrap page-hero__inner">
@@ -19,8 +20,8 @@ breadcrumbs:
     <h1>{{ sector.title }}</h1>
     <p class="lead">{{ sector.summary }}</p>
     <div class="hero__cta">
-      <a href="/contato/" class="btn btn--green btn--lg">Solicitar proposta</a>
-      <a href="/portfolio/" class="btn btn--light btn--lg">Ver projetos</a>
+      <a href="{{ '/contato/' | pathUrl(site) }}" class="btn btn--green btn--lg">Solicitar proposta</a>
+      <a href="{{ '/portfolio/' | pathUrl(site) }}" class="btn btn--light btn--lg">Ver projetos</a>
     </div>
   </div>
 </section>
@@ -36,7 +37,7 @@ breadcrumbs:
       <article class="card">
         <h3>{{ service.title }}</h3>
         <p>{{ service.summary }}</p>
-        <a class="textlink mt-24" href="/servicos/{{ service.id }}/">Ver serviço</a>
+        <a class="textlink mt-24" href="{{ ('/servicos/' + service.id + '/') | pathUrl(site) }}">Ver serviço</a>
       </article>
       {% endif %}
       {% endfor %}

@@ -9,7 +9,7 @@ breadcrumbs: [ { "label": "Insights" } ]
 ---<section id="conteudo" class="page-hero">
   <div class="motif-layer" aria-hidden="true"><div class="ring ring--gw ring-page-a"></div></div>
   <div class="wrap page-hero__inner">
-    <div class="crumbs"><a href="/">Início</a> / Insights</div>
+    <div class="crumbs"><a href="{{ '/' | pathUrl(site) }}">Início</a> / Insights</div>
     <span class="eyebrow">Biblioteca técnica</span>
     <h1>Conteúdo para reduzir incerteza regulatória e operacional.</h1>
     <p class="lead">Guias, alertas e notas técnicas voltados a equipes que precisam tomar decisões sobre água, solo, estabilidade, licenciamento e evidência documental.</p>
@@ -30,7 +30,7 @@ breadcrumbs: [ { "label": "Insights" } ]
         <h3>{{ post.title }}</h3>
         <p>{{ post.description }}</p>
         <code>{{ post.status }}</code>
-        <a class="textlink mt-24" href="/insights/{{ post.slug }}/">Ver estrutura</a>
+        <a class="textlink mt-24" href="{{ ('/insights/' + post.slug + '/') | pathUrl(site) }}">Ver estrutura</a>
       </article>
       {% endfor %}
     </div>
@@ -40,12 +40,12 @@ breadcrumbs: [ { "label": "Insights" } ]
 <section class="section bg-paper">
   <div class="wrap">
     <div class="grid grid-3">
-      <article class="card reveal"><div class="mono mini-label">ALERTA REGULATÓRIO</div><h3>Condicionantes ambientais em obras hidráulicas</h3><p>Como estruturar prazos, responsáveis e evidências para reduzir risco de multa, atraso ou retrabalho.</p><a href="/contato/" class="textlink mt-24">Solicitar guia técnico</a></article>
-      <article class="card reveal"><div class="mono mini-label">GUIA TÉCNICO</div><h3>Modelagem hidrodinâmica para ruptura hipotética</h3><p>Dados mínimos, premissas e produtos cartográficos esperados em estudos de barragem ou pilha.</p><a href="/contato/" class="textlink mt-24">Falar com especialista</a></article>
-      <article class="card reveal"><div class="mono mini-label">NOTA TÉCNICA</div><h3>Ensaios de solo e rastreabilidade documental</h3><p>Como conectar laudos, amostras, boletins e memória de cálculo ao ciclo de projeto e obra.</p><a href="/servicos/#ensaios" class="textlink mt-24">Ver ensaios</a></article>
-      <article class="card reveal"><div class="mono mini-label">CHECKLIST</div><h3>Documentos para diagnóstico geotécnico inicial</h3><p>Lista de entrada para reduzir lacunas antes de sondagem, ensaio, modelagem ou revisão de projeto.</p><a href="/contato/" class="textlink mt-24">Solicitar checklist</a></article>
-      <article class="card reveal"><div class="mono mini-label">RELATÓRIO</div><h3>Riscos hídricos em empreendimentos complexos</h3><p>Temas recorrentes em drenagem, recalque, inundação, segurança de estruturas e interface regulatória.</p><a href="/servicos/#hidrologia" class="textlink mt-24">Ver hidrologia</a></article>
-      <article class="card reveal"><div class="mono mini-label">WEBINAR</div><h3>Rastreabilidade técnica para auditorias ambientais</h3><p>Fluxo de evidências para conectar campo, laboratório, modelagem, licenciamento e operação.</p><a href="/contato/" class="textlink mt-24">Registrar interesse</a></article>
+      <article class="card reveal"><div class="mono mini-label">ALERTA REGULATÓRIO</div><h3>Condicionantes ambientais em obras hidráulicas</h3><p>Como estruturar prazos, responsáveis e evidências para reduzir risco de multa, atraso ou retrabalho.</p><a href="{{ '/contato/' | pathUrl(site) }}" class="textlink mt-24">Solicitar guia técnico</a></article>
+      <article class="card reveal"><div class="mono mini-label">GUIA TÉCNICO</div><h3>Modelagem hidrodinâmica para ruptura hipotética</h3><p>Dados mínimos, premissas e produtos cartográficos esperados em estudos de barragem ou pilha.</p><a href="{{ '/contato/' | pathUrl(site) }}" class="textlink mt-24">Falar com especialista</a></article>
+      <article class="card reveal"><div class="mono mini-label">NOTA TÉCNICA</div><h3>Ensaios de solo e rastreabilidade documental</h3><p>Como conectar laudos, amostras, boletins e memória de cálculo ao ciclo de projeto e obra.</p><a href="{{ '/servicos/#ensaios' | pathUrl(site) }}" class="textlink mt-24">Ver ensaios</a></article>
+      <article class="card reveal"><div class="mono mini-label">CHECKLIST</div><h3>Documentos para diagnóstico geotécnico inicial</h3><p>Lista de entrada para reduzir lacunas antes de sondagem, ensaio, modelagem ou revisão de projeto.</p><a href="{{ '/contato/' | pathUrl(site) }}" class="textlink mt-24">Solicitar checklist</a></article>
+      <article class="card reveal"><div class="mono mini-label">RELATÓRIO</div><h3>Riscos hídricos em empreendimentos complexos</h3><p>Temas recorrentes em drenagem, recalque, inundação, segurança de estruturas e interface regulatória.</p><a href="{{ '/servicos/#hidrologia' | pathUrl(site) }}" class="textlink mt-24">Ver hidrologia</a></article>
+      <article class="card reveal"><div class="mono mini-label">WEBINAR</div><h3>Rastreabilidade técnica para auditorias ambientais</h3><p>Fluxo de evidências para conectar campo, laboratório, modelagem, licenciamento e operação.</p><a href="{{ '/contato/' | pathUrl(site) }}" class="textlink mt-24">Registrar interesse</a></article>
     </div>
   </div>
 </section>
@@ -55,6 +55,6 @@ breadcrumbs: [ { "label": "Insights" } ]
     <span class="eyebrow eyebrow--center center-justify">Atualizações</span>
     <h2>Receba alertas técnicos e regulatórios.</h2>
     <p>Use o contato para solicitar materiais ou indicar um tema para a próxima nota técnica.</p>
-    <div class="cta-band__btns"><a href="/contato/" class="btn btn--green btn--lg">Solicitar conteúdo</a></div>
+    <div class="cta-band__btns"><a href="{{ '/contato/' | pathUrl(site) }}" class="btn btn--green btn--lg">Solicitar conteúdo</a></div>
   </div>
 </section>

@@ -11,6 +11,13 @@ module.exports = function(eleventyConfig) {
     return base + "/" + String(path).replace(/^\//, "");
   });
 
+  eleventyConfig.addFilter("pathUrl", function(path, site) {
+    if (!path) return "/";
+    if (/^(https?:)?\/\//.test(path) || /^mailto:|^tel:|^#/.test(path)) return path;
+    const basePath = site && site.basePath ? site.basePath : "";
+    return (basePath + "/" + String(path).replace(/^\//, "")).replace(/\/{2,}/g, "/");
+  });
+
   eleventyConfig.addFilter("json", function(value) {
     return JSON.stringify(value, null, 2);
   });

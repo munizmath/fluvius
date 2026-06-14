@@ -8,7 +8,7 @@ navKey: contato
 breadcrumbs: [ { "label": "Contato" } ]
 ---<section id="conteudo" class="page-hero">
   <div class="wrap page-hero__inner">
-    <div class="crumbs"><a href="/">Início</a> / Contato</div>
+    <div class="crumbs"><a href="{{ '/' | pathUrl(site) }}">Início</a> / Contato</div>
     <span class="eyebrow">Solicitar proposta</span>
     <h1>Envie o desafio técnico do seu empreendimento.</h1>
     <p class="lead">Quanto mais contexto sobre setor, localização, prazo, documentos existentes e risco principal, mais objetiva será a resposta técnica.</p>
@@ -40,7 +40,7 @@ breadcrumbs: [ { "label": "Contato" } ]
         <div class="field"><label for="mensagem">Contexto do projeto <span class="req">*</span></label><textarea id="mensagem" name="mensagem" required placeholder="Localização, prazo, documentos existentes, risco principal e objetivo da contratação."></textarea></div>
         <div class="field field--check"><label><input type="checkbox" name="consentimento" required> Concordo com o uso dos dados para retorno comercial e técnico.</label></div>
         <button class="btn btn--primary btn--lg" type="submit">Enviar solicitação</button>
-        <p id="form-note" class="form-note">Este formulário usa {{ site.contact.formProvider }}. Consulte a <a href="/privacidade/">política de privacidade</a>.</p>
+        <p id="form-note" class="form-note">Este formulário usa {{ site.contact.formProvider }}. Consulte a <a href="{{ '/privacidade/' | pathUrl(site) }}">política de privacidade</a>.</p>
       </form>
       {% else %}
       <section class="form-card reveal" aria-labelledby="contato-bloqueado">
@@ -55,7 +55,7 @@ breadcrumbs: [ { "label": "Contato" } ]
           <div class="matrix__row"><div class="k">Prazo desejado</div><div class="v">Informe no WhatsApp/e-mail se há urgência regulatória, janela de obra ou data de protocolo.</div></div>
           <div class="matrix__row"><div class="k">Tempo de resposta</div><div class="v">Aguardando confirmação dos donos para publicar uma promessa real de atendimento.</div></div>
         </div>
-        <p class="form-note">Quando o provedor for escolhido, este bloco vira formulário real com consentimento, honeypot, validação acessível e redirecionamento para <a href="/obrigado/">obrigado</a>.</p>
+        <p class="form-note">Quando o provedor for escolhido, este bloco vira formulário real com consentimento, honeypot, validação acessível e redirecionamento para <a href="{{ '/obrigado/' | pathUrl(site) }}">obrigado</a>.</p>
       </section>
       {% endif %}
       <aside class="card reveal">

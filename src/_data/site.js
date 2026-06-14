@@ -1,4 +1,5 @@
 const baseUrl = (process.env.SITE_BASE_URL || "https://munizmath.github.io/fluvius").replace(/\/$/, "");
+const basePath = new URL(baseUrl).pathname.replace(/\/$/, "");
 const gaMeasurementId = process.env.GA_MEASUREMENT_ID || "";
 const searchConsoleVerification = process.env.GOOGLE_SITE_VERIFICATION || "";
 const formEndpoint = process.env.CONTACT_FORM_ENDPOINT || "";
@@ -8,6 +9,7 @@ module.exports = {
   shortName: "Fluvius",
   description: "Engenharia de Recursos Hídricos e Geotecnia para empreendimentos complexos.",
   baseUrl,
+  basePath: basePath === "/" ? "" : basePath,
   locale: "pt_BR",
   language: "pt-BR",
   themeColor: "#1c2a6e",

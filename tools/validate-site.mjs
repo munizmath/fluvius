@@ -3,6 +3,8 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const SITE = path.join(ROOT, "_site");
+const baseUrl = (process.env.SITE_BASE_URL || "https://munizmath.github.io/fluvius").replace(/\/$/, "");
+const basePath = new URL(baseUrl).pathname.replace(/\/$/, "");
 const failures = [];
 
 function walk(dir) {
@@ -20,8 +22,10 @@ function fail(file, message) {
 
 function existsPublic(ref) {
   if (!ref || ref.startsWith("http") || ref.startsWith("mailto:") || ref.startsWith("tel:") || ref.startsWith("#")) return true;
-  const clean = ref.split("#")[0].split("?")[0];
+  let clean = ref.split("#")[0].split("?")[0];
   if (!clean) return true;
+  if (basePath && basePath !== "/" && clean === basePath) clean = "/";
+  if (basePath && basePath !== "/" && clean.startsWith(`${basePath}/`)) clean = clean.slice(basePath.length) || "/";
   const target = clean.startsWith("/") ? path.join(SITE, clean) : null;
   if (!target) return true;
   if (fs.existsSync(target) && fs.statSync(target).isFile()) return true;

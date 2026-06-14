@@ -13,7 +13,7 @@ breadcrumbs: [ { "label": "Serviços" } ]
     <div class="ring ring--nw ring-page-b"></div>
   </div>
   <div class="wrap page-hero__inner">
-    <div class="crumbs"><a href="/">Início</a> / Serviços</div>
+    <div class="crumbs"><a href="{{ '/' | pathUrl(site) }}">Início</a> / Serviços</div>
     <span class="eyebrow">O que fazemos</span>
     <h1>Estudos, projetos e ensaios em Recursos Hídricos e Geotecnia.</h1>
     <p class="lead">Três disciplinas integradas que cobrem o ciclo de vida do empreendimento — da viabilidade hídrica e investigação geotécnica à caracterização laboratorial — sempre alinhadas às normas técnicas e ao licenciamento ambiental.</p>
@@ -68,10 +68,10 @@ breadcrumbs: [ { "label": "Serviços" } ]
           <li>Estudos de ruptura hipotética de barragens e pilhas de rejeito/estéril</li>
           <li>Sistemas de recalque (bombeamento, adutoras) e redes de distribuição de água</li>
         </ul>
-        <div class="mt-32"><a href="/contato/" class="btn btn--primary">Falar sobre um projeto hídrico
+        <div class="mt-32"><a href="{{ '/contato/' | pathUrl(site) }}" class="btn btn--primary">Falar sobre um projeto hídrico
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
-      <div class="split__media reveal"><img loading="lazy" decoding="async" src="/assets/river-accent.webp" alt="Curso d'água e infraestrutura hidráulica"></div>
+      <div class="split__media reveal"><img loading="lazy" decoding="async" src="{{ '/assets/river-accent.webp' | pathUrl(site) }}" alt="Curso d'água e infraestrutura hidráulica"></div>
     </div>
   </div>
 </section>
@@ -79,7 +79,7 @@ breadcrumbs: [ { "label": "Serviços" } ]
 <section class="section bg-surface" id="geotecnia">
   <div class="wrap">
     <div class="split split--rev">
-      <div class="split__media reveal"><img loading="lazy" decoding="async" src="/assets/hero-dam.webp" alt="Barragem e estrutura geotécnica em vale"></div>
+      <div class="split__media reveal"><img loading="lazy" decoding="async" src="{{ '/assets/hero-dam.webp' | pathUrl(site) }}" alt="Barragem e estrutura geotécnica em vale"></div>
       <div class="reveal">
         <span class="eyebrow">02 — Disciplina</span>
         <h2 class="mt-16">Geotecnia</h2>
@@ -93,7 +93,7 @@ breadcrumbs: [ { "label": "Serviços" } ]
           <li>Projetos de terraplenagem</li>
           <li>Projetos de estradas e pavimentação</li>
         </ul>
-        <div class="mt-32"><a href="/contato/" class="btn btn--primary">Falar sobre um projeto geotécnico
+        <div class="mt-32"><a href="{{ '/contato/' | pathUrl(site) }}" class="btn btn--primary">Falar sobre um projeto geotécnico
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
     </div>
@@ -190,8 +190,8 @@ breadcrumbs: [ { "label": "Serviços" } ]
     <h2>Precisa de um estudo, projeto ou ensaio?</h2>
     <p>Descreva o escopo e o setor. Retornamos com proposta técnica e caminho regulatório.</p>
     <div class="cta-band__btns">
-      <a href="/contato/" class="btn btn--green btn--lg">Solicitar proposta</a>
-      <a href="/portfolio/" class="btn btn--light btn--lg">Ver projetos</a>
+      <a href="{{ '/contato/' | pathUrl(site) }}" class="btn btn--green btn--lg">Solicitar proposta</a>
+      <a href="{{ '/portfolio/' | pathUrl(site) }}" class="btn btn--light btn--lg">Ver projetos</a>
     </div>
   </div>
 </section>

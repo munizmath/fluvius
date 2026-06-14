@@ -36,9 +36,9 @@ breadcrumbs:
       {% endfor %}
     </div>
     <div class="mt-40 flex wrap-gap">
-      <a class="btn btn--primary" href="/servicos/">Botão primário</a>
-      <a class="btn btn--green" href="/contato/">Botão de conversão</a>
-      <a class="btn btn--ghost" href="/portfolio/">Botão secundário</a>
+      <a class="btn btn--primary" href="{{ '/servicos/' | pathUrl(site) }}">Botão primário</a>
+      <a class="btn btn--green" href="{{ '/contato/' | pathUrl(site) }}">Botão de conversão</a>
+      <a class="btn btn--ghost" href="{{ '/portfolio/' | pathUrl(site) }}">Botão secundário</a>
     </div>
   </div>
 </section>
