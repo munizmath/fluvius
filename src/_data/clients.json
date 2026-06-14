@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Focus Engenharia",
+    "logo": "/assets/clients/focus.webp",
+    "url": "https://grupofocusengenharia.com.br/",
+    "source": "https://grupofocusengenharia.com.br/wp-content/uploads/2024/12/Logo__Focus.png",
+    "authorization": "Uso informado como autorizado por contrato."
+  },
+  {
+    "name": "South Star Battery Metals Corp",
+    "logo": "/assets/clients/southstar.webp",
+    "url": "https://southstarbatterymetals.com/",
+    "source": "https://southstarbatterymetals.com/wp-content/uploads/2021/05/Gradient_Fill.png",
+    "authorization": "Uso informado como autorizado por contrato."
+  },
+  {
+    "name": "WALM Engenharia",
+    "logo": "/assets/clients/walm.webp",
+    "url": "https://www.walmengenharia.com.br/",
+    "source": "https://www.walmengenharia.com.br/wp-content/uploads/2025/01/logo_walm_site.png",
+    "authorization": "Uso informado como autorizado por contrato."
+  },
+  {
+    "name": "Consmara Engenharia",
+    "logo": "/assets/clients/consmara.webp",
+    "url": "https://consmara.com.br/",
+    "source": "https://consmara.com.br/wp-content/themes/custom-template/images/logo.png",
+    "authorization": "Uso informado como autorizado por contrato."
+  }
+]

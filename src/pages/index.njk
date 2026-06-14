@@ -256,10 +256,11 @@ breadcrumbs: []
       <span class="eyebrow">Clientes</span>
     </div>
     <div class="clients reveal">
-      <div class="client">FOCUS</div>
-      <div class="client">south<span>star</span><small>Battery Metals Corp</small></div>
-      <div class="client"><span>W</span>alm<small>Engenharia</small></div>
-      <div class="client">CONSMARA<small>Engenharia Ltda</small></div>
+      {% for client in clients %}
+      <a class="client-logo" href="{{ client.url }}" target="_blank" rel="noopener" aria-label="{{ client.name }}">
+        <img src="{{ client.logo | pathUrl(site) }}" alt="{{ client.name }}" loading="lazy" decoding="async">
+      </a>
+      {% endfor %}
     </div>
   </div>
 </section>
