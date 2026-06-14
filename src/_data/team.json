@@ -9,10 +9,9 @@
       "Atua com estudos hidrológicos e hidráulicos, modelagem de cheias, Dam Break, drenagem, contenção de sedimentos, barragens, diques, sumps, auditorias técnicas e suporte a projetos de segurança de barragens.",
       "Na Fluvius, atua no desenvolvimento e revisão técnica de estudos de recursos hídricos, hidráulica, hidrologia, drenagem e geotecnia ambiental, com foco em conformidade regulatória, segurança técnica e qualidade dos entregáveis."
     ],
-    "image": "/assets/team-placeholder.svg",
+    "image": "/assets/glaucia.webp",
     "linkedin": "https://www.linkedin.com/in/glauciamuniz",
-    "status": "BIO_VALIDADA",
-    "pending": "Foto oficial pendente."
+    "status": "BIO_VALIDADA"
   },
   {
     "name": "João Augusto de Souza Pinto",
@@ -24,9 +23,8 @@
       "Antes da Fluvius, atuou em consultoria técnica e em instituições públicas e privadas ligadas a recursos hídricos, mineração, infraestrutura e meio ambiente.",
       "Na Fluvius, coordena projetos de recursos hídricos e geotecnia com foco em rastreabilidade, conformidade técnica e entregáveis revisados."
     ],
-    "image": "/assets/team-placeholder.svg",
+    "image": "/assets/joao.webp",
     "linkedin": "https://www.linkedin.com/in/joão-augusto-de-souza-pinto-20a8a128",
-    "status": "BIO_VALIDADA",
-    "pending": "Foto oficial pendente."
+    "status": "BIO_VALIDADA"
   }
 ]

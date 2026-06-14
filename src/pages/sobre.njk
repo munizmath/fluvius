@@ -55,7 +55,7 @@ breadcrumbs: [ { "label": "Quem Somos" } ]
     <div class="grid grid-2 mt-40">
       {% for person in team %}
       <article class="card team-card reveal">
-        <img src="{{ person.image | pathUrl(site) }}" alt="Retrato pendente de {{ person.role }}" width="160" height="160" loading="lazy" decoding="async">
+        <img src="{{ person.image | pathUrl(site) }}" alt="Retrato de {{ person.name }}" width="160" height="160" loading="lazy" decoding="async">
         <div>
           <h3>{{ person.name }}</h3>
           <p class="muted">{{ person.role }}</p>
