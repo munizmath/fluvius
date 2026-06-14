@@ -1,0 +1,36 @@
+---
+layout: base.njk
+pagination:
+  data: posts
+  size: 1
+  alias: post
+permalink: "/insights/{{ post.slug }}/index.html"
+title: "{{ post.title }} — Fluvius Engenharia"
+description: "{{ post.description }}"
+navKey: insights
+breadcrumbs:
+  - label: "Insights"
+    url: "/insights/"
+  - label: "{{ post.title }}"
+---
+<article class="section bg-paper">
+  <div class="wrap prose">
+    <span class="eyebrow">{{ post.category }}</span>
+    <h1>{{ post.title }}</h1>
+    <p class="lead">{{ post.description }}</p>
+    <div class="card mt-40">
+      <h2>Conteúdo aguardando validação técnica</h2>
+      <p>Esta página já define a estrutura editorial e a URL de SEO. O texto final deve vir da empresa com dados reais, exemplos autorizados e revisão técnica.</p>
+      <code>{{ post.status }}</code>
+    </div>
+    <h2>Estrutura recomendada</h2>
+    <ul class="card__list">
+      <li>Problema técnico e contexto regulatório.</li>
+      <li>Dados mínimos para iniciar o estudo.</li>
+      <li>Etapas de análise, modelagem ou projeto.</li>
+      <li>Entregáveis esperados.</li>
+      <li>Riscos de não contratar ou de contratar sem evidência suficiente.</li>
+      <li>CTA para proposta técnica.</li>
+    </ul>
+  </div>
+</article>

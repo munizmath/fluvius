@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Glaucia Muniz",
+    "role": "Fundadora",
+    "bio": "Engenheira Ambiental com atuação em hidrologia, hidráulica, gestão de risco hídrico e segurança de barragens. Mestre em Gestão e Regulação de Recursos Hídricos, com experiência em docência e consultoria em recursos hídricos.",
+    "image": "/assets/team-placeholder.svg",
+    "linkedin": "https://www.linkedin.com/in/glauciamuniz",
+    "status": "BIO_PUBLICA_PRELIMINAR",
+    "pending": "Confirmar foto, CREA, cargo formal, anos de experiência e projetos de destaque."
+  },
+  {
+    "name": "João Augusto de Souza Pinto",
+    "role": "Fundador",
+    "bio": "Hidrólogo sênior com atuação em modelagem hidrológica e hidráulica, previsão hidrológica, gestão de reservatórios e recursos hídricos. Possui trajetória acadêmica ligada à UFMG e produção técnica em modelagem hidrológica.",
+    "image": "/assets/team-placeholder.svg",
+    "linkedin": "https://www.linkedin.com/in/joão-augusto-de-souza-pinto-20a8a128",
+    "status": "BIO_PUBLICA_PRELIMINAR",
+    "pending": "Confirmar foto, CREA, cargo formal, anos de experiência e projetos de destaque."
+  }
+]

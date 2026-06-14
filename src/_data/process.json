@@ -1,0 +1,26 @@
+[
+  {
+    "step": "1",
+    "title": "Briefing técnico",
+    "description": "Coleta de setor, local, risco principal, documentos existentes e prazo desejado.",
+    "status": "prazo_real_pendente"
+  },
+  {
+    "step": "2",
+    "title": "Proposta e escopo",
+    "description": "Definição de entregáveis, responsáveis, premissas, dados necessários e necessidade de ART.",
+    "status": "prazo_real_pendente"
+  },
+  {
+    "step": "3",
+    "title": "Execução",
+    "description": "Campo, laboratório, modelagem, análise técnica e checkpoints de alinhamento.",
+    "status": "prazo_real_pendente"
+  },
+  {
+    "step": "4",
+    "title": "Entrega e suporte",
+    "description": "Relatório, memorial, mapas, laudos, versões finais e suporte técnico para uso do material.",
+    "status": "prazo_real_pendente"
+  }
+]

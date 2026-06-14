@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "estudo-de-ruptura-de-barragem",
+    "title": "Estudo de ruptura de barragem: dados mínimos para começar",
+    "description": "Estrutura editorial pronta para artigo técnico sobre ruptura hipotética de barragem, PAEBM e modelagem hidráulica.",
+    "category": "Guia técnico",
+    "status": "AWAITING_OWNER_CONTENT"
+  },
+  {
+    "slug": "projeto-de-drenagem-urbana-mg",
+    "title": "Projeto de drenagem urbana em MG: critérios técnicos e licenciamento",
+    "description": "Estrutura editorial pronta para artigo técnico sobre drenagem urbana, risco de alagamento e evidências de projeto.",
+    "category": "SEO técnico",
+    "status": "AWAITING_OWNER_CONTENT"
+  }
+]

@@ -1,0 +1,21 @@
+<section class="section bg-surface">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Depoimentos</span>
+      <h2>Espaço reservado para validação de clientes.</h2>
+      <p class="lead">Os textos abaixo devem ser substituídos por depoimentos autorizados, com nome, cargo e empresa.</p>
+    </div>
+    <div class="grid grid-2 mt-40">
+      {% for item in testimonials %}
+      <figure class="card testimonial reveal">
+        <blockquote>{{ item.quote }}</blockquote>
+        <figcaption>
+          <strong>{{ item.name }}</strong>
+          <span>{{ item.role }} · {{ item.company }}</span>
+          <code>{{ item.status }}</code>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>

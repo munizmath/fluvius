@@ -28,5 +28,6 @@ temp/
 node_modules/
 dist/
 build/
+_site/
 .cache/
 .parcel-cache/

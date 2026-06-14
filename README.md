@@ -1,66 +1,48 @@
 # Fluvius Engenharia
 
-Site institucional estático da Fluvius Engenharia, empresa focada em Recursos Hídricos, Geotecnia, Meio Ambiente e gestão técnica de projetos complexos. O projeto é composto por páginas HTML, CSS compartilhado, JavaScript leve e imagens locais.
+Site institucional estático da Fluvius Engenharia, focado em Recursos Hídricos, Geotecnia, Meio Ambiente e gestão técnica de projetos complexos.
 
-## Principais Páginas
-
-- `index.html`: página inicial com proposta de valor, serviços, setores, metodologia, plataforma digital, projetos e chamada de contato.
-- `servicos.html`: detalhamento das frentes de Hidrologia & Hidráulica, Geotecnia, Ensaios Laboratoriais, Engenharia Estrutural e Topografia.
-- `portfolio.html`: vitrine de projetos e setores atendidos.
-- `metodologia.html`: método de trabalho e etapas técnicas.
-- `plataforma.html`: módulos digitais para gestão operacional e compliance.
-- `insights.html`: conteúdos técnicos e chamadas para guias/checklists.
-- `sobre.html`: posicionamento institucional.
-- `contato.html`: canais comerciais e WhatsApp.
+O projeto agora usa **Eleventy** para gerar HTML estático a partir de templates, dados e páginas fonte. O resultado continua sendo um site simples de publicar em hospedagens estáticas.
 
 ## Stack
 
-- **HTML5** para estrutura das páginas.
-- **CSS3** em `assets/fluvius.css` para layout, tokens visuais e responsividade.
-- **JavaScript vanilla** em `assets/site.js` para menu mobile, animações de entrada, tema visual e ano dinâmico no rodapé.
-- **Assets locais** em `assets/` para logotipo e imagens.
+- **Eleventy** para build estático.
+- **Nunjucks** para layouts e páginas.
+- **CSS** em `assets/fluvius.css`.
+- **JavaScript vanilla** em `assets/site.js`.
+- **Dados estruturados** em `src/_data/`.
+- **Assets locais** em `assets/`.
 
-Não há etapa de build, dependências Node, backend ou banco de dados.
-
-## Estrutura
+## Estrutura Principal
 
 ```text
 .
-├── assets/
-│   ├── favicon.svg
-│   ├── fluvius.css
-│   ├── site.js
-│   ├── hero-dam.jpg
-│   ├── logo-lockup.jpg
-│   ├── logo-lockup.png
-│   └── river-accent.jpg
-├── 404.html
-├── contato.html
-├── index.html
-├── insights.html
-├── metodologia.html
-├── obrigado.html
-├── plataforma.html
-├── portfolio.html
-├── privacidade.html
-├── robots.txt
-├── servicos.html
-├── sitemap.xml
-└── sobre.html
+├── assets/                 # CSS, JS, imagens, favicon
+├── docs/
+│   ├── audit/              # baseline, contratos, imagens e releases
+│   └── plan/               # plano de melhorias arquiteturais
+├── src/
+│   ├── _data/              # site, navegação, serviços, setores, projetos
+│   ├── _includes/          # layout, head, header, footer, breadcrumbs
+│   └── pages/              # páginas públicas
+├── tools/                  # migração e validação
+├── .eleventy.js
+├── package.json
+└── package-lock.json
 ```
 
-## Como Executar Localmente
+## Como Rodar
 
-Como o site é estático, abrir `index.html` no navegador já funciona:
+Instale as dependências:
 
 ```bash
-xdg-open index.html
+npm install
 ```
 
-Também é possível subir um servidor local simples para testar caminhos e comportamento de navegador de forma mais próxima de produção:
+Rode em modo desenvolvimento:
 
 ```bash
-python3 -m http.server 8080
+npm run dev
 ```
 
 Depois acesse:
@@ -69,86 +51,135 @@ Depois acesse:
 http://localhost:8080
 ```
 
-## Deploy
+Gerar build estático:
 
-O projeto pode ser publicado em qualquer hospedagem de site estático.
+```bash
+npm run build
+```
+
+Validar antes de publicar:
+
+```bash
+npm run validate
+```
+
+O build final sai em:
+
+```text
+_site/
+```
+
+## Páginas
+
+- `src/pages/index.njk`: página inicial.
+- `src/pages/servicos.njk`: serviços técnicos.
+- `src/pages/portfolio.njk`: projetos/cases.
+- `src/pages/metodologia.njk`: método de trabalho.
+- `src/pages/plataforma.njk`: plataforma digital.
+- `src/pages/insights.njk`: conteúdos técnicos.
+- `src/pages/sobre.njk`: posicionamento institucional.
+- `src/pages/contato.njk`: canais comerciais.
+- `src/pages/privacidade.njk`: política de privacidade.
+- `src/pages/obrigado.njk`: confirmação futura de envio.
+- `src/pages/404.njk`: página não encontrada.
+
+## Dados Centralizados
+
+- `src/_data/site.js`: nome, domínio, contato, imagem social e ambiente.
+- `src/_data/navigation.json`: menu principal.
+- `src/_data/services.json`: serviços.
+- `src/_data/sectors.json`: setores.
+- `src/_data/projects.json`: projetos/cases.
+- `src/_data/taxonomy.json`: jornadas, disciplinas e CTAs.
+
+## Contato e Formulário
+
+O formulário real fica marcado como `BLOCKED_PROVIDER` em `src/_data/site.js` enquanto `CONTACT_FORM_ENDPOINT` não estiver definido.
+
+Enquanto o provedor de deploy/formulário não for definido, a página de contato usa WhatsApp e e-mail como canais reais. Quando o provedor for escolhido:
+
+- Netlify: usar Netlify Forms.
+- Vercel: usar Serverless Function.
+- Outro host estático: usar Formspree ou provedor equivalente aprovado.
+
+Não coloque tokens, chaves ou segredos no HTML, JS ou dados versionados.
+
+## Deploy
 
 ### GitHub Pages
 
-1. Envie o repositório para o GitHub.
-2. No repositório remoto, abra `Settings > Pages`.
-3. Selecione a branch `main` e a pasta `/root`.
-4. Salve e aguarde a publicação.
-
-URL prevista para este repositório:
-
-```text
-https://munizmath.github.io/fluvius/
-```
-
-### Netlify
-
-Use as seguintes configurações:
+Configuração recomendada:
 
 | Campo | Valor |
 | --- | --- |
-| Build command | vazio |
-| Publish directory | `.` |
+| Build command | `npm run build` |
+| Publish directory | `_site` |
 
-O formulário de `contato.html` já está preparado para Netlify Forms. Após o primeiro deploy, confirme no painel da Netlify se o formulário `contato` foi detectado.
+O projeto está preparado para GitHub Pages com domínio próprio:
+
+```text
+fluviusengenharia.com.br
+```
+
+O arquivo `CNAME` é copiado para `_site/` no build.
+
+As páginas principais usam rotas limpas, como:
+
+```text
+/servicos/
+/portfolio/
+/metodologia/
+/contato/
+```
+
+As URLs antigas `.html` continuam existindo como redirecionadores estáticos para compatibilidade.
+
+## Analytics e Search Console
+
+GA4 e Search Console ficam prontos por variável de ambiente, sem ID falso no código:
+
+```bash
+GA_MEASUREMENT_ID=G-XXXXXXXXXX GOOGLE_SITE_VERIFICATION=xxxxx npm run build
+```
+
+Enquanto esses valores não forem fornecidos, o status é `BLOCKED_ANALYTICS_ID`.
+
+### Netlify
+
+| Campo | Valor |
+| --- | --- |
+| Build command | `npm run build` |
+| Publish directory | `_site` |
 
 ### Vercel
-
-Use as seguintes configurações:
 
 | Campo | Valor |
 | --- | --- |
 | Framework Preset | Other |
-| Build Command | vazio |
-| Output Directory | `.` |
-
-## Manutenção
-
-- Mantenha imagens usadas pelo site dentro de `assets/`.
-- Evite duplicar imagens na raiz do projeto.
-- Não versionar `.env`, chaves privadas, certificados ou arquivos locais do sistema operacional.
-- Ao alterar navegação, conferir todos os menus e rodapés, pois as páginas HTML repetem esses blocos.
-- Ao alterar contato, revisar todas as ocorrências de e-mail e WhatsApp.
-- Ao trocar o domínio final, atualizar `canonical`, Open Graph, `sitemap.xml`, `robots.txt` e `site.webmanifest`.
+| Build Command | `npm run build` |
+| Output Directory | `_site` |
 
 ## Checklist Antes de Publicar
 
 ```bash
-# Verificar arquivos sensíveis por padrões comuns
+npm run validate
 rg -n -i "(api[_-]?key|secret|token|password|credential|private[_-]?key|bearer)" .
-
-# Verificar referências locais de imagens, scripts e estilos
-rg -n "(src=|href=)" *.html
-
-# Iniciar servidor local
-python3 -m http.server 8080
 ```
 
-Depois, navegue pelas páginas principais em `http://localhost:8080`.
+Também conferir manualmente:
 
-## Git Remoto
+- Home, serviços, projetos, metodologia, insights, sobre, plataforma e contato.
+- Menu desktop e mobile.
+- Console do navegador sem erro.
+- CTAs chegando em contato, WhatsApp ou e-mail.
 
-Se o repositório remoto ainda estiver vazio:
+## Auditoria de Release
 
-```bash
-git init -b main
-git add .
-git commit -m "Initial static site"
-git remote add origin <URL_DO_REPOSITORIO>
-git push -u origin main
-```
+Use `docs/audit/releases/YYYY-MM-DD.md` para registrar:
 
-Se o repositório remoto já tiver commits, primeiro busque o histórico remoto:
-
-```bash
-git init -b main
-git remote add origin <URL_DO_REPOSITORIO>
-git fetch origin
-```
-
-Depois compare o histórico antes de publicar.
+- commit/versão;
+- URL publicada;
+- comandos executados;
+- resultado do `npm run validate`;
+- pendências como `BLOCKED_PROVIDER` e `BLOCKED_ASSET_SOURCE`;
+- caminho de rollback.

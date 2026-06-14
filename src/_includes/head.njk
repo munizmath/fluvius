@@ -1,0 +1,106 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ canonical or (page.url | absoluteUrl(site)) }}">
+<link rel="icon" href="{{ site.favicon }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logo-lockup.png">
+<link rel="manifest" href="{{ site.manifest }}">
+<meta name="theme-color" content="{{ site.themeColor }}">
+<meta property="og:type" content="{{ ogType or 'website' }}">
+<meta property="og:locale" content="{{ site.locale }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ ogTitle or title }}">
+<meta property="og:description" content="{{ ogDescription or description }}">
+<meta property="og:url" content="{{ canonical or (page.url | absoluteUrl(site)) }}">
+<meta property="og:image" content="{{ (ogImage or site.socialImage) | absoluteUrl(site) }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ ogTitle or title }}">
+<meta name="twitter:description" content="{{ ogDescription or description }}">
+<meta name="twitter:image" content="{{ (ogImage or site.socialImage) | absoluteUrl(site) }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/fluvius.css">
+{% if site.analytics.searchConsoleVerification %}
+<meta name="google-site-verification" content="{{ site.analytics.searchConsoleVerification }}">
+{% endif %}
+{% if site.analytics.gaMeasurementId %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.gaMeasurementId }}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '{{ site.analytics.gaMeasurementId }}');
+</script>
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.name }}",
+  "url": "{{ site.baseUrl }}",
+  "logo": "{{ site.logo | absoluteUrl(site) }}",
+  "email": "{{ site.contact.email }}",
+  "areaServed": "Brasil",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "{{ site.contact.email }}",
+    "url": "{{ site.contact.whatsappUrl }}"
+  }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.name }}",
+  "url": "{{ site.baseUrl }}",
+  "inLanguage": "{{ site.language }}"
+}
+</script>
+{% if schema %}
+<script type="application/ld+json">{{ schema | json | safe }}</script>
+{% endif %}
+{% if breadcrumbs and breadcrumbs.length %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "{{ site.baseUrl }}/"
+    }{% for crumb in breadcrumbs %},
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index + 1 }},
+      "name": "{{ crumb.label }}",
+      "item": "{{ (crumb.url or page.url) | absoluteUrl(site) }}"
+    }{% endfor %}
+  ]
+}
+</script>
+{% endif %}
+{% if faqSchema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in faq %}
+    {
+      "@type": "Question",
+      "name": "{{ item.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ item.answer }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

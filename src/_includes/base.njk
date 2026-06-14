@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+{% include "head.njk" %}
+</head>
+<body>
+{% include "header.njk" %}
+{% include "breadcrumbs.njk" %}
+<main id="conteudo">
+{{ content | safe }}
+</main>
+{% include "footer.njk" %}
+{% include "whatsapp-float.njk" %}
+<script src="/assets/site.js"></script>
+</body>
+</html>

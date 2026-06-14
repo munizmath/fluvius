@@ -1,0 +1,8 @@
+[
+  { "id": "mineracao", "title": "Mineração", "summary": "Barragens e pilhas de rejeito/estéril" },
+  { "id": "energia", "title": "Geração de Energia", "summary": "Hidrelétricas e estruturas hidráulicas" },
+  { "id": "infraestrutura", "title": "Infraestrutura & Transportes", "summary": "Estradas, pavimentação e drenagem" },
+  { "id": "saneamento", "title": "Saneamento", "summary": "Drenagem urbana e recursos hídricos" },
+  { "id": "agronegocio", "title": "Agronegócio", "summary": "Irrigação e drenagem agrícola" },
+  { "id": "industria", "title": "Indústria", "summary": "Obras hidráulicas e geotécnicas" }
+]

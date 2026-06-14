@@ -1,0 +1,44 @@
+---
+layout: base.njk
+permalink: /_internal/design-system/index.html
+title: Design System Interno — Fluvius Engenharia
+description: Página interna para revisão dos componentes reais do site Fluvius.
+navKey: internal
+eleventyExcludeFromCollections: true
+breadcrumbs:
+  - label: Design System Interno
+---
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Interno</span>
+    <h1>Design system real do site</h1>
+    <p class="lead">Página técnica para conferir os componentes usados no site público.</p>
+  </div>
+</section>
+<section class="section bg-paper">
+  <div class="wrap">
+    <div class="grid grid-3">
+      {% for service in services.slice(0, 3) %}
+      <article class="card svc-card">
+        <div class="svc-card__top">
+          <span class="count">Componente</span>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.summary }}</p>
+        </div>
+        <div class="svc-card__body">
+          <ul class="card__list">
+            {% for item in service.items.slice(0, 3) %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="mt-40 flex wrap-gap">
+      <a class="btn btn--primary" href="/servicos/">Botão primário</a>
+      <a class="btn btn--green" href="/contato/">Botão de conversão</a>
+      <a class="btn btn--ghost" href="/portfolio/">Botão secundário</a>
+    </div>
+  </div>
+</section>

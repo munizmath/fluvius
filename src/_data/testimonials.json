@@ -1,0 +1,16 @@
+[
+  {
+    "quote": "Depoimento aguardando autorização do cliente.",
+    "name": "Cliente a confirmar",
+    "role": "Cargo a confirmar",
+    "company": "Empresa a confirmar",
+    "status": "AWAITING_OWNER_CONTENT"
+  },
+  {
+    "quote": "Depoimento aguardando autorização do cliente.",
+    "name": "Cliente a confirmar",
+    "role": "Cargo a confirmar",
+    "company": "Empresa a confirmar",
+    "status": "AWAITING_OWNER_CONTENT"
+  }
+]

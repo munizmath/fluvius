@@ -1,0 +1,198 @@
+---
+layout: base.njk
+permalink: /servicos/index.html
+title: "Serviços de geotecnia, hidrologia e projeto de drenagem urbana — Fluvius"
+description: "Serviços de estudo de ruptura de barragem, projeto de drenagem urbana, estabilidade de taludes, geotecnia, topografia e ensaios laboratoriais em MG e Brasil."
+canonical: "https://fluviusengenharia.com.br/servicos/"
+faqSchema: true
+ogImage: "/assets/hero-dam.webp"
+navKey: servicos
+breadcrumbs: [ { "label": "Serviços" } ]
+---<section id="conteudo" class="page-hero">
+  <div class="motif-layer" aria-hidden="true">
+    <div class="ring ring--gw ring-page-a"></div>
+    <div class="ring ring--nw ring-page-b"></div>
+  </div>
+  <div class="wrap page-hero__inner">
+    <div class="crumbs"><a href="/">Início</a> / Serviços</div>
+    <span class="eyebrow">O que fazemos</span>
+    <h1>Estudos, projetos e ensaios em Recursos Hídricos e Geotecnia.</h1>
+    <p class="lead">Três disciplinas integradas que cobrem o ciclo de vida do empreendimento — da viabilidade hídrica e investigação geotécnica à caracterização laboratorial — sempre alinhadas às normas técnicas e ao licenciamento ambiental.</p>
+  </div>
+</section>
+
+<section class="section bg-surface">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Como contratar</span>
+      <h2>Do briefing à entrega técnica.</h2>
+      <p class="lead">Os prazos reais por serviço serão preenchidos quando a empresa confirmar o processo comercial. A estrutura abaixo já organiza o fluxo de contratação.</p>
+    </div>
+    <div class="grid grid-4 mt-40">
+      {% for item in process %}
+      <article class="card reveal">
+        <span class="count">{{ item.step }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+        <code>{{ item.status }}</code>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include "roi-block.njk" %}
+{% include "faq-block.njk" %}
+
+<section class="section--tight bg-surface">
+  <div class="wrap">
+    <div class="grid grid-3">
+      <a href="#hidrologia" class="sector"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3c3.5 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2.5-6 6-10z"/></svg></span><div><b>Hidrologia &amp; Hidráulica</b><small>6 frentes de atuação</small></div></a>
+      <a href="#geotecnia" class="sector"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 20h18M5 20l5-11 4 7 2-4 3 8"/></svg></span><div><b>Geotecnia</b><small>7 frentes de atuação</small></div></a>
+      <a href="#ensaios" class="sector"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 3h6M10 3v6l-5 8a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-8V3"/></svg></span><div><b>Ensaios Laboratoriais</b><small>7 ensaios de referência</small></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-paper" id="hidrologia">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow">01 — Disciplina</span>
+        <h2 class="mt-16">Hidrologia &amp; Hidráulica</h2>
+        <p class="lead">Da chuva ao escoamento, do canal à ruptura. Dimensionamos e simulamos sistemas hídricos para que obras sejam seguras, eficientes e licenciáveis — com modelagem que sustenta decisões diante de órgãos ambientais e auditorias.</p>
+        <ul class="card__list mt-24">
+          <li>Projetos de sistemas de drenagem</li>
+          <li>Dimensionamento de obras hidráulicas</li>
+          <li>Modelagem hidrodinâmica</li>
+          <li>Projetos de irrigação e drenagem agrícola</li>
+          <li>Estudos de ruptura hipotética de barragens e pilhas de rejeito/estéril</li>
+          <li>Sistemas de recalque (bombeamento, adutoras) e redes de distribuição de água</li>
+        </ul>
+        <div class="mt-32"><a href="/contato/" class="btn btn--primary">Falar sobre um projeto hídrico
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <div class="split__media reveal"><img loading="lazy" decoding="async" src="/assets/river-accent.webp" alt="Curso d'água e infraestrutura hidráulica"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-surface" id="geotecnia">
+  <div class="wrap">
+    <div class="split split--rev">
+      <div class="split__media reveal"><img loading="lazy" decoding="async" src="/assets/hero-dam.webp" alt="Barragem e estrutura geotécnica em vale"></div>
+      <div class="reveal">
+        <span class="eyebrow">02 — Disciplina</span>
+        <h2 class="mt-16">Geotecnia</h2>
+        <p class="lead">Estabilidade, fundações e gestão de rejeitos para as estruturas mais críticas de um empreendimento. Investigamos o subsolo, analisamos risco e projetamos soluções que resistem ao escrutínio técnico, regulatório e operacional.</p>
+        <ul class="card__list mt-24">
+          <li>Projetos de barragens e pilhas</li>
+          <li>Estabilidade de taludes e encostas</li>
+          <li>Projetos de fundações especiais</li>
+          <li>Gestão de rejeitos e resíduos</li>
+          <li>Controle de erosão e recuperação de áreas degradadas</li>
+          <li>Projetos de terraplenagem</li>
+          <li>Projetos de estradas e pavimentação</li>
+        </ul>
+        <div class="mt-32"><a href="/contato/" class="btn btn--primary">Falar sobre um projeto geotécnico
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-paper" id="ensaios">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">03 — Disciplina</span>
+      <h2 class="mt-16">Ensaios Laboratoriais</h2>
+      <p class="lead">Caracterização de solos e efluentes com rastreabilidade total — cada resultado pronto para sustentar projeto, licenciamento e controle de qualidade de obra.</p>
+    </div>
+    <div class="grid grid-3 mt-40">
+      <div class="card reveal"><div class="mono mini-label">E-01</div><h3 class="compact-title">Caracterização granulométrica</h3><p>Distribuição de partículas do solo por peneiramento e sedimentação.</p></div>
+      <div class="card reveal"><div class="mono mini-label">E-02</div><h3 class="compact-title">Limites de Atterberg</h3><p>Limites de liquidez e plasticidade para classificação do solo.</p></div>
+      <div class="card reveal"><div class="mono mini-label">E-03</div><h3 class="compact-title">Densidade real</h3><p>Massa específica dos grãos como base de cálculo geotécnico.</p></div>
+      <div class="card reveal"><div class="mono mini-label">E-04</div><h3 class="compact-title">Umidade do solo</h3><p>Teor de água natural, parâmetro-chave de comportamento.</p></div>
+      <div class="card reveal"><div class="mono mini-label">E-05</div><h3 class="compact-title">Compactação do solo</h3><p>Curva de compactação e umidade ótima para controle de obra.</p></div>
+      <div class="card reveal"><div class="mono mini-label">E-06</div><h3 class="compact-title">Índice de Suporte Califórnia (CBR e expansão)</h3><p>Capacidade de suporte para pavimentação e terraplenagem.</p></div>
+      <div class="card reveal"><div class="mono mini-label">E-07</div><h3 class="compact-title">Sólidos em suspensão em efluentes</h3><p>Caracterização de sólidos suspensos para controle ambiental.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-navy section-relative">
+  <div class="motif-layer" aria-hidden="true"><div class="ring ring--gw ring-left-deep"></div></div>
+  <div class="wrap relative">
+    <div class="grid grid-2 gap-panel">
+      <div class="reveal">
+        <span class="eyebrow">Tecnologia</span>
+        <h2 class="mt-16">Softwares especializados.</h2>
+        <p class="lead">Ferramentas de referência da engenharia, aplicadas com critério para gerar resultados verificáveis.</p>
+        <div class="grid grid-2 mt-32 gap-14">
+          <div class="card tool-card"><h3 class="tool-title">HEC-RAS</h3><p class="tool-copy">Modelagem hidráulica e de inundação</p></div>
+          <div class="card tool-card"><h3 class="tool-title">MODFLOW</h3><p class="tool-copy">Modelagem de águas subterrâneas</p></div>
+          <div class="card tool-card"><h3 class="tool-title">GeoStudio</h3><p class="tool-copy">Estabilidade e geotecnia computacional</p></div>
+          <div class="card tool-card"><h3 class="tool-title">AutoCAD Civil 3D</h3><p class="tool-copy">Projeto e detalhamento de infraestrutura</p></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Conformidade</span>
+        <h2 class="mt-16">Normas e licenciamento.</h2>
+        <p class="lead">Cada entregável é construído para sobreviver a órgãos públicos, auditorias e ao Ministério Público.</p>
+        <div class="matrix mt-32">
+          <div class="matrix__row"><div class="k">ABNT</div><div class="v">Normas técnicas brasileiras de projeto e ensaio.</div></div>
+          <div class="matrix__row"><div class="k">DNIT</div><div class="v">Especificações para infraestrutura de transportes.</div></div>
+          <div class="matrix__row"><div class="k">ANA</div><div class="v">Diretrizes de recursos hídricos e segurança de barragens.</div></div>
+          <div class="matrix__row"><div class="k">IBAMA / estaduais</div><div class="v">Licenciamento ambiental e atendimento a condicionantes.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-paper">
+  <div class="wrap">
+    <div class="sec-head sec-head--center reveal">
+      <span class="eyebrow eyebrow--center">Entregáveis</span>
+      <h2>O que você recebe.</h2>
+      <p class="lead mx-auto">Documentação técnica rastreável, pronta para projeto, licenciamento e operação.</p>
+    </div>
+    <ul class="checklist mt-40 reveal max-880 mx-auto">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Relatórios técnicos e memoriais de cálculo</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Projetos executivos e desenhos técnicos</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Modelos hidrológicos, hidráulicos e geotécnicos</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Laudos e boletins de ensaio laboratorial</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Mapas de inundação e cartografia temática</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Documentação de suporte ao licenciamento</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section bg-surface">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Rastreabilidade</span>
+      <h2>Critérios mínimos para evidência técnica.</h2>
+      <p class="lead">Cada escopo é conduzido com premissas declaradas, responsáveis técnicos, referência normativa, memória de cálculo e documentação de suporte para auditoria, órgão público e tomada de decisão executiva.</p>
+    </div>
+    <div class="matrix mt-40 reveal">
+      <div class="matrix__row"><div class="k">Premissas</div><div class="v">Dados de entrada, limitações do estudo e hipóteses adotadas.</div></div>
+      <div class="matrix__row"><div class="k">Normas</div><div class="v">Referências ABNT, DNIT, ANA e exigências de órgãos ambientais aplicáveis ao escopo.</div></div>
+      <div class="matrix__row"><div class="k">Responsabilidade</div><div class="v">Registro dos profissionais responsáveis e documentação técnica exigível em proposta ou contrato.</div></div>
+      <div class="matrix__row"><div class="k">Evidências</div><div class="v">Mapas, laudos, modelos, fotos de campo, boletins e versões controladas de entregáveis.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-band">
+  <div class="motif-layer" aria-hidden="true"><div class="ring ring--gw ring-right-high"></div></div>
+  <div class="wrap cta-band__inner">
+    <span class="eyebrow eyebrow--center center-justify">Vamos conversar</span>
+    <h2>Precisa de um estudo, projeto ou ensaio?</h2>
+    <p>Descreva o escopo e o setor. Retornamos com proposta técnica e caminho regulatório.</p>
+    <div class="cta-band__btns">
+      <a href="/contato/" class="btn btn--green btn--lg">Solicitar proposta</a>
+      <a href="/portfolio/" class="btn btn--light btn--lg">Ver projetos</a>
+    </div>
+  </div>
+</section>

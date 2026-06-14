@@ -1,0 +1,17 @@
+<section class="section bg-surface">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Valor prático</span>
+      <h2>O que a engenharia precisa destravar.</h2>
+      <p class="lead">A proposta de valor é transformar risco técnico em decisão documentada, com menos atraso, menos retrabalho e mais previsibilidade.</p>
+    </div>
+    <div class="grid grid-3 mt-40">
+      {% for item in roi %}
+      <article class="card reveal">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

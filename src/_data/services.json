@@ -1,0 +1,64 @@
+[
+  {
+    "id": "hidrologia-hidraulica",
+    "title": "Hidrologia & Hidráulica",
+    "sectorTags": ["mineracao", "energia", "saneamento", "infraestrutura"],
+    "summary": "Drenagem, obras hidráulicas e modelagem para projetos seguros e licenciáveis.",
+    "items": [
+      "Projetos de sistemas de drenagem",
+      "Dimensionamento de obras hidráulicas",
+      "Modelagem hidrodinâmica",
+      "Estudos de ruptura hipotética de barragens e pilhas",
+      "Sistemas de recalque, adutoras e distribuição"
+    ]
+  },
+  {
+    "id": "geotecnia",
+    "title": "Geotecnia",
+    "sectorTags": ["mineracao", "infraestrutura", "industria"],
+    "summary": "Estabilidade, fundações e gestão de rejeitos para estruturas críticas.",
+    "items": [
+      "Projetos de barragens e pilhas",
+      "Estabilidade de taludes e encostas",
+      "Fundações especiais",
+      "Gestão de rejeitos e resíduos",
+      "Controle de erosão e recuperação de áreas degradadas",
+      "Terraplenagem, estradas e pavimentação"
+    ]
+  },
+  {
+    "id": "ensaios-laboratoriais",
+    "title": "Ensaios Laboratoriais",
+    "sectorTags": ["mineracao", "saneamento", "infraestrutura"],
+    "summary": "Caracterização de solos e efluentes com rastreabilidade e norma.",
+    "items": [
+      "Caracterização granulométrica",
+      "Limites de Atterberg",
+      "Densidade real e umidade do solo",
+      "Compactação e Índice de Suporte Califórnia (CBR)",
+      "Caracterização de sólidos em suspensão em efluentes"
+    ]
+  },
+  {
+    "id": "engenharia-estrutural",
+    "title": "Engenharia Estrutural",
+    "sectorTags": ["energia", "industria", "infraestrutura"],
+    "summary": "Apoio estrutural para obras hidráulicas, contenções e estruturas técnicas.",
+    "items": [
+      "Avaliação de estruturas existentes",
+      "Apoio ao detalhamento executivo",
+      "Compatibilização com disciplinas hidráulicas e geotécnicas"
+    ]
+  },
+  {
+    "id": "topografia",
+    "title": "Topografia",
+    "sectorTags": ["mineracao", "agronegocio", "infraestrutura"],
+    "summary": "Levantamentos e apoio de campo para diagnóstico, projeto e monitoramento.",
+    "items": [
+      "Levantamentos planialtimétricos",
+      "Apoio a investigações de campo",
+      "Base territorial para modelagem e projeto"
+    ]
+  }
+]

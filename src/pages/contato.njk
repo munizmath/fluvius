@@ -1,0 +1,70 @@
+---
+layout: base.njk
+permalink: /contato/index.html
+title: "Contato — Fluvius Engenharia"
+description: "Fale com a Fluvius Engenharia para solicitar proposta técnica em recursos hídricos, geotecnia, ensaios e suporte ao licenciamento."
+canonical: "https://fluviusengenharia.com.br/contato/"
+ogImage: "/assets/hero-dam.webp"
+navKey: contato
+breadcrumbs: [ { "label": "Contato" } ]
+---<section id="conteudo" class="page-hero">
+  <div class="wrap page-hero__inner">
+    <div class="crumbs"><a href="/">Início</a> / Contato</div>
+    <span class="eyebrow">Solicitar proposta</span>
+    <h1>Envie o desafio técnico do seu empreendimento.</h1>
+    <p class="lead">Quanto mais contexto sobre setor, localização, prazo, documentos existentes e risco principal, mais objetiva será a resposta técnica.</p>
+  </div>
+</section>
+
+<section class="section bg-paper">
+  <div class="wrap">
+    <div class="grid grid-2 contact-layout">
+      {% if site.contact.formEndpoint %}
+      <form class="form-card reveal" name="contato" action="{{ site.contact.formEndpoint }}" method="POST" aria-describedby="form-note">
+        <p class="sr-only"><label>Não preencha este campo: <input name="website"></label></p>
+        <div class="form-row c2">
+          <div class="field"><label for="nome">Nome <span class="req">*</span></label><input id="nome" name="nome" autocomplete="name" required></div>
+          <div class="field"><label for="empresa">Empresa</label><input id="empresa" name="empresa" autocomplete="organization"></div>
+        </div>
+        <div class="form-row c2">
+          <div class="field"><label for="email">E-mail <span class="req">*</span></label><input id="email" type="email" name="email" autocomplete="email" required></div>
+          <div class="field"><label for="telefone">Telefone</label><input id="telefone" name="telefone" autocomplete="tel" inputmode="tel"></div>
+        </div>
+        <div class="form-row c2">
+          <div class="field"><label for="setor">Setor</label><select id="setor" name="setor">{% for sector in sectors %}<option value="{{ sector.id }}">{{ sector.title }}</option>{% endfor %}<option value="outro">Outro</option></select></div>
+          <div class="field"><label for="servico">Serviço</label><select id="servico" name="servico">{% for service in services %}<option value="{{ service.id }}">{{ service.title }}</option>{% endfor %}</select></div>
+        </div>
+        <div class="form-row c2">
+          <div class="field"><label for="prazo">Prazo desejado</label><input id="prazo" name="prazo_desejado" placeholder="Ex.: 30 dias, urgência regulatória"></div>
+          <div class="field"><label for="resposta">Tempo de resposta esperado</label><input id="resposta" name="tempo_resposta" value="A confirmar pela Fluvius" readonly></div>
+        </div>
+        <div class="field"><label for="mensagem">Contexto do projeto <span class="req">*</span></label><textarea id="mensagem" name="mensagem" required placeholder="Localização, prazo, documentos existentes, risco principal e objetivo da contratação."></textarea></div>
+        <div class="field field--check"><label><input type="checkbox" name="consentimento" required> Concordo com o uso dos dados para retorno comercial e técnico.</label></div>
+        <button class="btn btn--primary btn--lg" type="submit">Enviar solicitação</button>
+        <p id="form-note" class="form-note">Este formulário usa {{ site.contact.formProvider }}. Consulte a <a href="/privacidade/">política de privacidade</a>.</p>
+      </form>
+      {% else %}
+      <section class="form-card reveal" aria-labelledby="contato-bloqueado">
+        <span class="eyebrow">Canal ativo</span>
+        <h2 id="contato-bloqueado">Atendimento por WhatsApp e e-mail.</h2>
+        <p class="lead">O formulário com envio automático está marcado como <code>{{ site.contact.formStatus }}</code> até o provedor de publicação ser definido. Assim o site não simula uma coleta que ainda não envia dados.</p>
+        <div class="hero__cta">
+          <a class="btn btn--green btn--lg" href="{{ site.contact.whatsappUrl }}" target="_blank" rel="noopener">Falar no WhatsApp</a>
+          <a class="btn btn--primary btn--lg" href="mailto:{{ site.contact.email }}">Enviar e-mail</a>
+        </div>
+        <div class="matrix mt-24">
+          <div class="matrix__row"><div class="k">Prazo desejado</div><div class="v">Informe no WhatsApp/e-mail se há urgência regulatória, janela de obra ou data de protocolo.</div></div>
+          <div class="matrix__row"><div class="k">Tempo de resposta</div><div class="v">Aguardando confirmação dos donos para publicar uma promessa real de atendimento.</div></div>
+        </div>
+        <p class="form-note">Quando o provedor for escolhido, este bloco vira formulário real com consentimento, honeypot, validação acessível e redirecionamento para <a href="/obrigado/">obrigado</a>.</p>
+      </section>
+      {% endif %}
+      <aside class="card reveal">
+        <div class="contact-line"><div class="k">E-mail</div><a class="v" href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></div>
+        <div class="contact-line"><div class="k">WhatsApp</div><a class="v" href="{{ site.contact.whatsappUrl }}" target="_blank" rel="noopener">{{ site.contact.whatsappLabel }}</a></div>
+        <div class="contact-line"><div class="k">Localização</div><div class="v">{{ site.contact.location }}</div></div>
+        <div class="contact-line"><div class="k">Resposta técnica</div><p class="muted">Inclua escopo, setor, localização, prazo e documentos disponíveis para acelerar a triagem.</p></div>
+      </aside>
+    </div>
+  </div>
+</section>

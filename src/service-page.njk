@@ -1,0 +1,68 @@
+---
+layout: base.njk
+pagination:
+  data: services
+  size: 1
+  alias: service
+permalink: "/servicos/{{ service.id }}/index.html"
+title: "{{ service.title }} — Fluvius Engenharia"
+description: "{{ service.summary }}"
+navKey: servicos
+breadcrumbs:
+  - label: "Serviços"
+    url: "/servicos/"
+  - label: "{{ service.title }}"
+---
+<section class="page-hero">
+  <div class="wrap page-hero__inner">
+    <span class="eyebrow">Serviço</span>
+    <h1>{{ service.title }}</h1>
+    <p class="lead">{{ service.summary }}</p>
+    <div class="hero__cta">
+      <a href="/contato/" class="btn btn--green btn--lg">Solicitar proposta</a>
+      <a href="/servicos/" class="btn btn--light btn--lg">Ver todos os serviços</a>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ service.title }}",
+  "description": "{{ service.summary }}",
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ site.name }}",
+    "url": "{{ site.baseUrl }}"
+  },
+  "areaServed": "Brasil",
+  "serviceType": "{{ service.title }}"
+}
+</script>
+<section class="section bg-paper">
+  <div class="wrap">
+    <div class="grid grid-2">
+      <article class="card">
+        <span class="eyebrow">Entregas</span>
+        <h2>Escopo técnico</h2>
+        <ul class="card__list mt-24">
+          {% for item in service.items %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </article>
+      <article class="card">
+        <span class="eyebrow">Aplicação</span>
+        <h2>Setores conectados</h2>
+        <ul class="card__list mt-24">
+          {% for sectorId in service.sectorTags %}
+          {% set sector = sectors | findSector(sectorId) %}
+          {% if sector %}
+          <li><a class="textlink" href="/setores/{{ sector.id }}/">{{ sector.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>

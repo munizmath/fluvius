@@ -1,0 +1,16 @@
+<section class="section bg-paper">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Perguntas frequentes antes da proposta.</h2>
+    </div>
+    <div class="faq-list mt-40">
+      {% for item in faq %}
+      <details class="faq-item reveal">
+        <summary>{{ item.question }}</summary>
+        <p>{{ item.answer }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>

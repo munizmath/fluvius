@@ -1,0 +1,163 @@
+---
+layout: base.njk
+permalink: /portfolio/index.html
+title: "Projetos de geotecnia, drenagem e barragens — Fluvius Engenharia"
+description: "Portfólio estruturado para cases de mineração, saneamento, energia, infraestrutura, agronegócio e indústria, com campos de cliente, local, ano, desafio e resultado."
+canonical: "https://fluviusengenharia.com.br/portfolio/"
+ogImage: "/assets/hero-dam.webp"
+navKey: portfolio
+breadcrumbs: [ { "label": "Projetos" } ]
+---<section id="conteudo" class="page-hero">
+  <div class="motif-layer" aria-hidden="true">
+    <div class="ring ring--gw ring-page-a"></div>
+    <div class="ring ring--nw ring-page-b"></div>
+  </div>
+  <div class="wrap page-hero__inner">
+    <div class="crumbs"><a href="/">Início</a> / Projetos</div>
+    <span class="eyebrow">Prova de execução</span>
+    <h1>Projetos que reduziram risco e destravaram licenciamento.</h1>
+    <p class="lead">Uma seleção de frentes técnicas recorrentes em Recursos Hídricos e Geotecnia, organizada pelo padrão de problema, abordagem, resultado e evidências necessárias para comprovação.</p>
+  </div>
+</section>
+
+<!-- FILTER NOTE -->
+<section class="section--tight bg-surface">
+  <div class="wrap">
+    <div class="flex items-center wrap-gap flex-between">
+      <div class="portfolio-filters" role="list" aria-label="Filtrar projetos por setor">
+        <button class="btn btn--ghost is-active" type="button" data-filter="all">Todos</button>
+        {% for sector in sectors %}
+        <button class="btn btn--ghost" type="button" data-filter="{{ sector.id }}">{{ sector.title }}</button>
+        {% endfor %}
+      </div>
+      <span class="muted muted-small">Organização por setor para leitura executiva e técnica.</span>
+    </div>
+  </div>
+</section>
+
+<!-- GRID -->
+<section class="section bg-paper">
+  <div class="wrap">
+    <div class="grid grid-3">
+
+      <article class="case reveal" data-sector="mineracao">
+        <div class="case__img"><img loading="lazy" decoding="async" src="/assets/hero-dam.webp" alt="Barragem em vale montanhoso"><span class="case__tag">Mineração</span></div>
+        <div class="case__body">
+          <h3>Estudo de ruptura hipotética de barragem de rejeito</h3>
+          <div class="case__row"><span class="k">Cliente</span><span class="v">— aguardando autorização</span></div>
+          <div class="case__row"><span class="k">Local</span><span class="v">— aguardando dados</span></div>
+          <div class="case__row"><span class="k">Ano</span><span class="v">—</span></div>
+          <div class="case__row"><span class="k">Desafio</span><span class="v">— aguardando case real</span></div>
+          <div class="case__row"><span class="k">Disciplina</span><span class="v">Hidrologia &amp; Hidráulica</span></div>
+          <div class="case__row"><span class="k">Escopo</span><span class="v">Modelagem hidrodinâmica e mapeamento de manchas de inundação</span></div>
+          <div class="case__row"><span class="k">Resultado</span><span class="v">Subsídio ao PAEBM e atendimento de condicionantes</span></div>
+          <div class="case__row"><span class="k">Evidência</span><span class="v">Modelo, mapas, memória de cálculo e registro de premissas</span></div>
+        </div>
+      </article>
+
+      <article class="case reveal" data-sector="saneamento">
+        <div class="case__img"><img loading="lazy" decoding="async" src="/assets/river-accent.webp" alt="Curso d'água com vegetação ciliar"><span class="case__tag">Saneamento</span></div>
+        <div class="case__body">
+          <h3>Drenagem urbana sustentável</h3>
+          <div class="case__row"><span class="k">Cliente</span><span class="v">— aguardando autorização</span></div>
+          <div class="case__row"><span class="k">Local</span><span class="v">— aguardando dados</span></div>
+          <div class="case__row"><span class="k">Ano</span><span class="v">—</span></div>
+          <div class="case__row"><span class="k">Desafio</span><span class="v">— aguardando case real</span></div>
+          <div class="case__row"><span class="k">Disciplina</span><span class="v">Hidrologia &amp; Hidráulica</span></div>
+          <div class="case__row"><span class="k">Escopo</span><span class="v">Microdrenagem e dispositivos de detenção</span></div>
+          <div class="case__row"><span class="k">Resultado</span><span class="v">Redução de risco de alagamento e aprovação no licenciamento</span></div>
+          <div class="case__row"><span class="k">Evidência</span><span class="v">Memorial hidráulico, planta de drenagem e critérios de projeto</span></div>
+        </div>
+      </article>
+
+      <article class="case reveal" data-sector="energia">
+        <div class="case__img"><img loading="lazy" decoding="async" src="/assets/hero-dam.webp" alt="Estrutura hidráulica em barragem"><span class="case__tag">Energia</span></div>
+        <div class="case__body">
+          <h3>Estabilidade de taludes em vale de hidrelétrica</h3>
+          <div class="case__row"><span class="k">Cliente</span><span class="v">— aguardando autorização</span></div>
+          <div class="case__row"><span class="k">Local</span><span class="v">— aguardando dados</span></div>
+          <div class="case__row"><span class="k">Ano</span><span class="v">—</span></div>
+          <div class="case__row"><span class="k">Desafio</span><span class="v">— aguardando case real</span></div>
+          <div class="case__row"><span class="k">Disciplina</span><span class="v">Geotecnia</span></div>
+          <div class="case__row"><span class="k">Escopo</span><span class="v">Investigação, análise de estabilidade e solução de contenção</span></div>
+          <div class="case__row"><span class="k">Resultado</span><span class="v">Contenção viável técnica e economicamente</span></div>
+          <div class="case__row"><span class="k">Evidência</span><span class="v">Seções geotécnicas, parâmetros de solo e análise de estabilidade</span></div>
+        </div>
+      </article>
+
+      <article class="case reveal" data-sector="infraestrutura">
+        <div class="case__img"><img loading="lazy" decoding="async" src="/assets/river-accent.webp" alt="Território com curso d'água e relevo"><span class="case__tag">Infraestrutura</span></div>
+        <div class="case__body">
+          <h3>Pavimentação e terraplenagem de via</h3>
+          <div class="case__row"><span class="k">Cliente</span><span class="v">— aguardando autorização</span></div>
+          <div class="case__row"><span class="k">Local</span><span class="v">— aguardando dados</span></div>
+          <div class="case__row"><span class="k">Ano</span><span class="v">—</span></div>
+          <div class="case__row"><span class="k">Desafio</span><span class="v">— aguardando case real</span></div>
+          <div class="case__row"><span class="k">Disciplina</span><span class="v">Geotecnia · Ensaios</span></div>
+          <div class="case__row"><span class="k">Escopo</span><span class="v">Ensaios CBR/compactação e dimensionamento de pavimento</span></div>
+          <div class="case__row"><span class="k">Resultado</span><span class="v">Estrutura de pavimento otimizada conforme DNIT</span></div>
+          <div class="case__row"><span class="k">Evidência</span><span class="v">Boletins de ensaio, perfil geotécnico e memorial de dimensionamento</span></div>
+        </div>
+      </article>
+
+      <article class="case reveal" data-sector="agronegocio">
+        <div class="case__img"><img loading="lazy" decoding="async" src="/assets/river-accent.webp" alt="Recurso hídrico em área rural"><span class="case__tag">Agronegócio</span></div>
+        <div class="case__body">
+          <h3>Sistema de irrigação e drenagem agrícola</h3>
+          <div class="case__row"><span class="k">Cliente</span><span class="v">— aguardando autorização</span></div>
+          <div class="case__row"><span class="k">Local</span><span class="v">— aguardando dados</span></div>
+          <div class="case__row"><span class="k">Ano</span><span class="v">—</span></div>
+          <div class="case__row"><span class="k">Desafio</span><span class="v">— aguardando case real</span></div>
+          <div class="case__row"><span class="k">Disciplina</span><span class="v">Hidrologia &amp; Hidráulica</span></div>
+          <div class="case__row"><span class="k">Escopo</span><span class="v">Dimensionamento de recalque, adutoras e distribuição</span></div>
+          <div class="case__row"><span class="k">Resultado</span><span class="v">Uso eficiente da água e ganho de produtividade hídrica</span></div>
+          <div class="case__row"><span class="k">Evidência</span><span class="v">Balanço hídrico, curvas de sistema e desenhos técnicos</span></div>
+        </div>
+      </article>
+
+      <article class="case reveal" data-sector="mineracao">
+        <div class="case__img"><img loading="lazy" decoding="async" src="/assets/hero-dam.webp" alt="Área de mineração com estrutura de contenção"><span class="case__tag">Mineração</span></div>
+        <div class="case__body">
+          <h3>Gestão de pilha de estéril e controle de erosão</h3>
+          <div class="case__row"><span class="k">Cliente</span><span class="v">— aguardando autorização</span></div>
+          <div class="case__row"><span class="k">Local</span><span class="v">— aguardando dados</span></div>
+          <div class="case__row"><span class="k">Ano</span><span class="v">—</span></div>
+          <div class="case__row"><span class="k">Desafio</span><span class="v">— aguardando case real</span></div>
+          <div class="case__row"><span class="k">Disciplina</span><span class="v">Geotecnia</span></div>
+          <div class="case__row"><span class="k">Escopo</span><span class="v">Projeto de pilha, drenagem e recuperação de área</span></div>
+          <div class="case__row"><span class="k">Resultado</span><span class="v">Estabilidade assegurada e passivo ambiental mitigado</span></div>
+          <div class="case__row"><span class="k">Evidência</span><span class="v">Análise de estabilidade, drenagem superficial e plano de recuperação</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+{% include "testimonials-block.njk" %}
+
+<!-- METRICS -->
+<section class="section--tight bg-surface">
+  <div class="wrap">
+    <div class="proofbar reveal">
+      <div><div class="n">6</div><div class="k">Setores organizados</div></div>
+      <div><div class="n">3</div><div class="k">Disciplinas técnicas</div></div>
+      <div><div class="n">4</div><div class="k">Tipos de evidência</div></div>
+      <div><div class="n">1</div><div class="k">Padrão de rastreabilidade</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-band">
+  <div class="motif-layer" aria-hidden="true"><div class="ring ring--gw ring-left-low"></div></div>
+  <div class="wrap cta-band__inner">
+    <span class="eyebrow eyebrow--center center-justify">Vamos conversar</span>
+    <h2>Quer um resultado parecido no seu empreendimento?</h2>
+    <p>Conte o desafio do seu projeto. Mostramos como abordaríamos tecnicamente.</p>
+    <div class="cta-band__btns">
+      <a href="/contato/" class="btn btn--green btn--lg">Solicitar proposta</a>
+      <a href="https://wa.me/5531993501315" class="btn btn--light btn--lg" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>

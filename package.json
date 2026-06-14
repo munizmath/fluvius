@@ -1,0 +1,19 @@
+{
+  "name": "fluvius-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Site institucional estatico da Fluvius Engenharia.",
+  "scripts": {
+    "migrate:pages": "node tools/migrate-existing-pages.mjs",
+    "dev": "eleventy --serve --port=8080",
+    "build": "eleventy && node tools/optimize-build.mjs",
+    "preview": "npx serve _site",
+    "validate": "npm run build && node tools/validate-site.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "clean-css": "^5.3.3",
+    "sharp": "^0.34.2",
+    "serve": "^14.2.4"
+  }
+}

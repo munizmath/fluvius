@@ -1,0 +1,14 @@
+{
+  "disciplines": ["Hidrologia & Hidráulica", "Geotecnia", "Ensaios Laboratoriais", "Engenharia Estrutural", "Topografia"],
+  "ctaIntentions": [
+    { "id": "proposta", "label": "Solicitar proposta", "url": "/contato.html" },
+    { "id": "whatsapp", "label": "WhatsApp", "url": "https://wa.me/5531993501315" },
+    { "id": "servicos", "label": "Ver serviços", "url": "/servicos.html" }
+  ],
+  "journeys": [
+    { "profile": "Mineração", "entry": "/portfolio.html", "next": "/servicos.html", "conversion": "/contato.html" },
+    { "profile": "Saneamento", "entry": "/servicos.html", "next": "/metodologia.html", "conversion": "/contato.html" },
+    { "profile": "Energia", "entry": "/portfolio.html", "next": "/metodologia.html", "conversion": "/contato.html" },
+    { "profile": "Indústria", "entry": "/servicos.html", "next": "/sobre.html", "conversion": "/contato.html" }
+  ]
+}

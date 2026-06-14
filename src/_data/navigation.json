@@ -1,0 +1,9 @@
+[
+  { "label": "Início", "url": "/", "key": "index" },
+  { "label": "Serviços", "url": "/servicos/", "key": "servicos" },
+  { "label": "Projetos", "url": "/portfolio/", "key": "portfolio" },
+  { "label": "Metodologia", "url": "/metodologia/", "key": "metodologia" },
+  { "label": "Insights", "url": "/insights/", "key": "insights" },
+  { "label": "Quem Somos", "url": "/sobre/", "key": "sobre" },
+  { "label": "Contato", "url": "/contato/", "key": "contato" }
+]

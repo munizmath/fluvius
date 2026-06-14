@@ -1,0 +1,24 @@
+[
+  {
+    "id": "barragem-mineracao",
+    "title": "Estudos de Segurança para Estrutura de Mineração",
+    "sector": "mineracao",
+    "discipline": "Geotecnia",
+    "scope": "Diagnóstico, estabilidade e recomendações técnicas para estrutura crítica.",
+    "deliverables": ["Diagnóstico técnico", "Análise de estabilidade", "Plano de recomendações"],
+    "image": "/assets/hero-dam.webp",
+    "alt": "Barragem em área de mineração",
+    "status": "conteudo_parcial"
+  },
+  {
+    "id": "estrutura-hidraulica-energia",
+    "title": "Modelagem Hidráulica para Geração de Energia",
+    "sector": "energia",
+    "discipline": "Hidrologia & Hidráulica",
+    "scope": "Simulação e apoio técnico para estrutura hidráulica em vale.",
+    "deliverables": ["Modelagem hidrodinâmica", "Cenários de vazão", "Memorial técnico"],
+    "image": "/assets/hero-dam.webp",
+    "alt": "Estrutura hidráulica em vale",
+    "status": "conteudo_parcial"
+  }
+]

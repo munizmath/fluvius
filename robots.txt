@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://munizmath.github.io/fluvius/sitemap.xml
+Sitemap: https://fluviusengenharia.com.br/sitemap.xml
