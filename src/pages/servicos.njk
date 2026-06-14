@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 permalink: /servicos/index.html
-title: "Serviços de geotecnia, hidrologia e projeto de drenagem urbana — Fluvius"
-description: "Serviços de estudo de ruptura de barragem, projeto de drenagem urbana, estabilidade de taludes, geotecnia, topografia e ensaios laboratoriais em MG e Brasil."
+title: "Serviços de recursos hídricos, hidrologia, hidráulica e geotecnia — Fluvius"
+description: "Serviços de hidrologia, hidráulica, geotecnia, topografia, meio ambiente, drenagem, bombeamento, barragens e licenciamento ambiental."
 faqSchema: true
 ogImage: "/assets/hero-dam.webp"
 navKey: servicos
@@ -15,8 +15,8 @@ breadcrumbs: [ { "label": "Serviços" } ]
   <div class="wrap page-hero__inner">
     <div class="crumbs"><a href="{{ '/' | pathUrl(site) }}">Início</a> / Serviços</div>
     <span class="eyebrow">O que fazemos</span>
-    <h1>Estudos, projetos e ensaios em Recursos Hídricos e Geotecnia.</h1>
-    <p class="lead">Três disciplinas integradas que cobrem o ciclo de vida do empreendimento — da viabilidade hídrica e investigação geotécnica à caracterização laboratorial — sempre alinhadas às normas técnicas e ao licenciamento ambiental.</p>
+    <h1>Soluções completas em recursos hídricos para grandes projetos.</h1>
+    <p class="lead">Atuação em hidrologia, hidráulica, geotecnia, topografia e meio ambiente, cobrindo estudos de chuvas, drenagem, bombeamento, barragens, qualidade da água e licenciamento ambiental.</p>
   </div>
 </section>
 
@@ -46,9 +46,9 @@ breadcrumbs: [ { "label": "Serviços" } ]
 <section class="section--tight bg-surface">
   <div class="wrap">
     <div class="grid grid-3">
-      <a href="#hidrologia" class="sector"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3c3.5 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2.5-6 6-10z"/></svg></span><div><b>Hidrologia &amp; Hidráulica</b><small>6 frentes de atuação</small></div></a>
-      <a href="#geotecnia" class="sector"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 20h18M5 20l5-11 4 7 2-4 3 8"/></svg></span><div><b>Geotecnia</b><small>7 frentes de atuação</small></div></a>
-      <a href="#ensaios" class="sector"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 3h6M10 3v6l-5 8a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-8V3"/></svg></span><div><b>Ensaios Laboratoriais</b><small>7 ensaios de referência</small></div></a>
+      {% for service in services %}
+      <a href="{{ ('/servicos/' + service.id + '/') | pathUrl(site) }}" class="sector"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3c3.5 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2.5-6 6-10z"/></svg></span><div><b>{{ service.title }}</b><small>{{ service.items.length }} frentes de atuação</small></div></a>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -61,12 +61,13 @@ breadcrumbs: [ { "label": "Serviços" } ]
         <h2 class="mt-16">Hidrologia &amp; Hidráulica</h2>
         <p class="lead">Da chuva ao escoamento, do canal à ruptura. Dimensionamos e simulamos sistemas hídricos para que obras sejam seguras, eficientes e licenciáveis — com modelagem que sustenta decisões diante de órgãos ambientais e auditorias.</p>
         <ul class="card__list mt-24">
-          <li>Projetos de sistemas de drenagem</li>
-          <li>Dimensionamento de obras hidráulicas</li>
-          <li>Modelagem hidrodinâmica</li>
-          <li>Projetos de irrigação e drenagem agrícola</li>
-          <li>Estudos de ruptura hipotética de barragens e pilhas de rejeito/estéril</li>
-          <li>Sistemas de recalque (bombeamento, adutoras) e redes de distribuição de água</li>
+          <li>Estudos de chuvas máximas</li>
+          <li>Análise de bacias hidrográficas</li>
+          <li>Modelagem hidrológica</li>
+          <li>Determinação de vazões extremas</li>
+          <li>Dimensionamento de sistemas de drenagem</li>
+          <li>Canais, bacias de contenção e estruturas de controle</li>
+          <li>Bombeamento de água</li>
         </ul>
         <div class="mt-32"><a href="{{ '/contato/' | pathUrl(site) }}" class="btn btn--primary">Falar sobre um projeto hídrico
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
@@ -85,13 +86,10 @@ breadcrumbs: [ { "label": "Serviços" } ]
         <h2 class="mt-16">Geotecnia</h2>
         <p class="lead">Estabilidade, fundações e gestão de rejeitos para as estruturas mais críticas de um empreendimento. Investigamos o subsolo, analisamos risco e projetamos soluções que resistem ao escrutínio técnico, regulatório e operacional.</p>
         <ul class="card__list mt-24">
-          <li>Projetos de barragens e pilhas</li>
-          <li>Estabilidade de taludes e encostas</li>
-          <li>Projetos de fundações especiais</li>
-          <li>Gestão de rejeitos e resíduos</li>
-          <li>Controle de erosão e recuperação de áreas degradadas</li>
-          <li>Projetos de terraplenagem</li>
-          <li>Projetos de estradas e pavimentação</li>
+          <li>Estabilidade de taludes</li>
+          <li>Análise geotécnica de barragens</li>
+          <li>Projetos de disposição de rejeitos</li>
+          <li>Instrumentação geotécnica</li>
         </ul>
         <div class="mt-32"><a href="{{ '/contato/' | pathUrl(site) }}" class="btn btn--primary">Falar sobre um projeto geotécnico
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
@@ -128,10 +126,10 @@ breadcrumbs: [ { "label": "Serviços" } ]
         <h2 class="mt-16">Softwares especializados.</h2>
         <p class="lead">Ferramentas de referência da engenharia, aplicadas com critério para gerar resultados verificáveis.</p>
         <div class="grid grid-2 mt-32 gap-14">
+          <div class="card tool-card"><h3 class="tool-title">HEC-HMS</h3><p class="tool-copy">Modelagem hidrológica</p></div>
           <div class="card tool-card"><h3 class="tool-title">HEC-RAS</h3><p class="tool-copy">Modelagem hidráulica e de inundação</p></div>
-          <div class="card tool-card"><h3 class="tool-title">MODFLOW</h3><p class="tool-copy">Modelagem de águas subterrâneas</p></div>
-          <div class="card tool-card"><h3 class="tool-title">GeoStudio</h3><p class="tool-copy">Estabilidade e geotecnia computacional</p></div>
-          <div class="card tool-card"><h3 class="tool-title">AutoCAD Civil 3D</h3><p class="tool-copy">Projeto e detalhamento de infraestrutura</p></div>
+          <div class="card tool-card"><h3 class="tool-title">FLO-2D</h3><p class="tool-copy">Simulação de escoamento e inundação</p></div>
+          <div class="card tool-card"><h3 class="tool-title">Balanço hídrico</h3><p class="tool-copy">Gestão quantitativa e qualidade da água</p></div>
         </div>
       </div>
       <div class="reveal">

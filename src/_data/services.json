@@ -3,13 +3,15 @@
     "id": "hidrologia-hidraulica",
     "title": "Hidrologia & Hidráulica",
     "sectorTags": ["mineracao", "energia", "saneamento", "infraestrutura"],
-    "summary": "Drenagem, obras hidráulicas e modelagem para projetos seguros e licenciáveis.",
+    "summary": "Estudos de chuvas, bacias, vazões, drenagem, canais, contenção e bombeamento para grandes projetos.",
     "items": [
-      "Projetos de sistemas de drenagem",
-      "Dimensionamento de obras hidráulicas",
-      "Modelagem hidrodinâmica",
-      "Estudos de ruptura hipotética de barragens e pilhas",
-      "Sistemas de recalque, adutoras e distribuição"
+      "Estudos de chuvas máximas",
+      "Análise de bacias hidrográficas",
+      "Modelagem hidrológica",
+      "Determinação de vazões extremas",
+      "Dimensionamento de sistemas de drenagem",
+      "Canais, bacias de contenção e estruturas de controle",
+      "Bombeamento de água"
     ]
   },
   {
@@ -18,12 +20,10 @@
     "sectorTags": ["mineracao", "infraestrutura", "industria"],
     "summary": "Estabilidade, fundações e gestão de rejeitos para estruturas críticas.",
     "items": [
-      "Projetos de barragens e pilhas",
-      "Estabilidade de taludes e encostas",
-      "Fundações especiais",
-      "Gestão de rejeitos e resíduos",
-      "Controle de erosão e recuperação de áreas degradadas",
-      "Terraplenagem, estradas e pavimentação"
+      "Estabilidade de taludes",
+      "Análise geotécnica de barragens",
+      "Projetos de disposição de rejeitos",
+      "Instrumentação geotécnica"
     ]
   },
   {
@@ -54,11 +54,26 @@
     "id": "topografia",
     "title": "Topografia",
     "sectorTags": ["mineracao", "agronegocio", "infraestrutura"],
-    "summary": "Levantamentos e apoio de campo para diagnóstico, projeto e monitoramento.",
+    "summary": "Levantamentos topográficos e planialtimétricos para projetos de infraestrutura hídrica e geotécnica.",
     "items": [
+      "Levantamentos topográficos",
       "Levantamentos planialtimétricos",
-      "Apoio a investigações de campo",
-      "Base territorial para modelagem e projeto"
+      "Apoio a projetos de infraestrutura hídrica e geotécnica"
+    ]
+  },
+  {
+    "id": "meio-ambiente",
+    "title": "Meio Ambiente",
+    "sectorTags": ["mineracao", "energia", "saneamento", "agronegocio", "industria"],
+    "summary": "Estudos ambientais, qualidade da água, recuperação de áreas degradadas e licenciamento ambiental.",
+    "items": [
+      "Estudos de impacto ambiental",
+      "Monitoramento da qualidade da água",
+      "Planos de recuperação de áreas degradadas",
+      "Licenciamento ambiental",
+      "Outorga e regulação do uso da água",
+      "Descaracterização de barragens",
+      "Análise de impacto ambiental"
     ]
   }
 ]
