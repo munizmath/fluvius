@@ -49,8 +49,8 @@ breadcrumbs: [ { "label": "Quem Somos" } ]
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Equipe</span>
-      <h2>Espaço reservado para sócios e responsáveis técnicos.</h2>
-      <p class="lead">Fotos, bios, formação, registro CREA e principais projetos serão preenchidos quando o material oficial for enviado.</p>
+      <h2>Sócios e responsáveis técnicos.</h2>
+      <p class="lead">Coordenação técnica com experiência em recursos hídricos, hidráulica, geotecnia, segurança de barragens e conformidade regulatória.</p>
     </div>
     <div class="grid grid-2 mt-40">
       {% for person in team %}
@@ -59,7 +59,15 @@ breadcrumbs: [ { "label": "Quem Somos" } ]
         <div>
           <h3>{{ person.name }}</h3>
           <p class="muted">{{ person.role }}</p>
+          {% if person.crea %}
+          <p class="mini-label mt-16">{{ person.crea }}</p>
+          {% endif %}
           <p>{{ person.bio }}</p>
+          {% if person.details %}
+          {% for paragraph in person.details %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
+          {% endif %}
           {% if person.linkedin %}
           <a class="textlink" href="{{ person.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
           {% endif %}

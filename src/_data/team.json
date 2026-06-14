@@ -1,20 +1,32 @@
 [
   {
-    "name": "Glaucia Muniz",
-    "role": "Fundadora",
-    "bio": "Engenheira Ambiental com atuação em hidrologia, hidráulica, gestão de risco hídrico e segurança de barragens. Mestre em Gestão e Regulação de Recursos Hídricos, com experiência em docência e consultoria em recursos hídricos.",
+    "name": "Gláucia Maria Muniz de Oliveira",
+    "role": "Sócia | Engenheira Ambiental | Recursos Hídricos e Segurança de Barragens",
+    "crea": "CREA nº 1408569590",
+    "bio": "Engenheira Ambiental com mais de 10 anos de experiência em hidrologia, hidráulica, segurança de barragens, gestão de risco hídrico e recursos hídricos aplicados a projetos de mineração, infraestrutura e meio ambiente.",
+    "details": [
+      "É mestre profissional em Gestão e Regulação de Recursos Hídricos pela UERJ / PROFÁGUA / ANA, graduada em Engenharia Ambiental pela Universidade FUMEC e possui formação em Engenharia Geotécnica pela PUC Minas.",
+      "Atua com estudos hidrológicos e hidráulicos, modelagem de cheias, Dam Break, drenagem, contenção de sedimentos, barragens, diques, sumps, auditorias técnicas e suporte a projetos de segurança de barragens.",
+      "Na Fluvius, atua no desenvolvimento e revisão técnica de estudos de recursos hídricos, hidráulica, hidrologia, drenagem e geotecnia ambiental, com foco em conformidade regulatória, segurança técnica e qualidade dos entregáveis."
+    ],
     "image": "/assets/team-placeholder.svg",
     "linkedin": "https://www.linkedin.com/in/glauciamuniz",
-    "status": "BIO_PUBLICA_PRELIMINAR",
-    "pending": "Confirmar foto, CREA, cargo formal, anos de experiência e projetos de destaque."
+    "status": "BIO_VALIDADA",
+    "pending": "Foto oficial pendente."
   },
   {
     "name": "João Augusto de Souza Pinto",
-    "role": "Fundador",
-    "bio": "Hidrólogo sênior com atuação em modelagem hidrológica e hidráulica, previsão hidrológica, gestão de reservatórios e recursos hídricos. Possui trajetória acadêmica ligada à UFMG e produção técnica em modelagem hidrológica.",
+    "role": "Sócio | Engenheiro Civil | Hidrólogo Sênior e Coordenador de Projetos",
+    "crea": "CREA-MG nº 1421974967",
+    "bio": "Hidrólogo com mais de 10 anos de experiência em modelagem hidrológica e hidráulica, drenagem, barragens, canais abertos, estudos de ruptura de barragens, barragens de rejeito, qualidade da água e previsão hidrológica.",
+    "details": [
+      "É mestre em Saneamento, Meio Ambiente e Recursos Hídricos pela UFMG, graduado em Ciências Ambientais pela UNIRIO e em Engenharia Civil pelo IFMG, com intercâmbio acadêmico na Universidade de Barcelona.",
+      "Antes da Fluvius, atuou em consultoria técnica e em instituições públicas e privadas ligadas a recursos hídricos, mineração, infraestrutura e meio ambiente.",
+      "Na Fluvius, coordena projetos de recursos hídricos e geotecnia com foco em rastreabilidade, conformidade técnica e entregáveis revisados."
+    ],
     "image": "/assets/team-placeholder.svg",
     "linkedin": "https://www.linkedin.com/in/joão-augusto-de-souza-pinto-20a8a128",
-    "status": "BIO_PUBLICA_PRELIMINAR",
-    "pending": "Confirmar foto, CREA, cargo formal, anos de experiência e projetos de destaque."
+    "status": "BIO_VALIDADA",
+    "pending": "Foto oficial pendente."
   }
 ]
