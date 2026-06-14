@@ -39,7 +39,7 @@ Branch model: trunk-based em `main`, com commits pequenos e escopo explicito
 - Adicionado botão flutuante de WhatsApp em todas as páginas.
 - Adicionada estrutura de artigos em Insights.
 - Adicionado suporte condicional a GA4/Search Console sem IDs fictícios.
-- Trocado domínio base para `https://fluviusengenharia.com.br` e adicionado `CNAME`.
+- Domínio real preparado como override futuro via `SITE_BASE_URL`, mas preview atual permanece em `https://munizmath.github.io/fluvius/` sem `CNAME`.
 
 ## Objetivo
 

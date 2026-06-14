@@ -115,13 +115,13 @@ Configuração recomendada:
 | Build command | `npm run build` |
 | Publish directory | `_site` |
 
-O projeto está preparado para GitHub Pages com domínio próprio:
+O preview público usa GitHub Pages no caminho do repositório:
 
 ```text
-fluviusengenharia.com.br
+https://munizmath.github.io/fluvius/
 ```
 
-O arquivo `CNAME` é copiado para `_site/` no build.
+Não há `CNAME` ativo por enquanto. O domínio `fluviusengenharia.com.br` deve ser ligado apenas depois de DNS/Cloudflare estarem prontos para apontar ao GitHub Pages.
 
 As páginas principais usam rotas limpas, como:
 
@@ -139,7 +139,7 @@ As URLs antigas `.html` continuam existindo como redirecionadores estáticos par
 GA4 e Search Console ficam prontos por variável de ambiente, sem ID falso no código:
 
 ```bash
-GA_MEASUREMENT_ID=G-XXXXXXXXXX GOOGLE_SITE_VERIFICATION=xxxxx npm run build
+SITE_BASE_URL=https://fluviusengenharia.com.br GA_MEASUREMENT_ID=G-XXXXXXXXXX GOOGLE_SITE_VERIFICATION=xxxxx npm run build
 ```
 
 Enquanto esses valores não forem fornecidos, o status é `BLOCKED_ANALYTICS_ID`.

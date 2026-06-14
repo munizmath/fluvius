@@ -1,4 +1,4 @@
-const baseUrl = (process.env.SITE_BASE_URL || "https://fluviusengenharia.com.br").replace(/\/$/, "");
+const baseUrl = (process.env.SITE_BASE_URL || "https://munizmath.github.io/fluvius").replace(/\/$/, "");
 const gaMeasurementId = process.env.GA_MEASUREMENT_ID || "";
 const searchConsoleVerification = process.env.GOOGLE_SITE_VERIFICATION || "";
 const formEndpoint = process.env.CONTACT_FORM_ENDPOINT || "";

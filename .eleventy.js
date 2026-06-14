@@ -2,7 +2,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ assets: "assets" });
   eleventyConfig.addPassthroughCopy({ "site.webmanifest": "site.webmanifest" });
   eleventyConfig.addPassthroughCopy({ "robots.txt": "robots.txt" });
-  eleventyConfig.addPassthroughCopy({ "CNAME": "CNAME" });
   eleventyConfig.addPassthroughCopy({ ".nojekyll": ".nojekyll" });
 
   eleventyConfig.addFilter("absoluteUrl", function(path, site) {
